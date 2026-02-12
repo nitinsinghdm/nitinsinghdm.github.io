@@ -209,3 +209,23 @@ p {
     height: 100px;
   }
 }
+.lang-de {
+  display: none;
+}
+
+.lang-toggle {
+  margin: 15px 0;
+}
+
+.lang-toggle button {
+  background: none;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 4px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.lang-toggle button:hover {
+  background-color: #333;
+}

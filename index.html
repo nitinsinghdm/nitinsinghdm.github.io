@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Nitin Singh | Entry-Level Data Analyst</title>
+  <title>Nitin Singh | Data Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
@@ -14,22 +14,31 @@
     <!-- SIDEBAR -->
     <aside class="sidebar">
 
-      <!-- PROFILE IMAGE -->
       <img src="profiledp.png" alt="Nitin Singh" class="profile-pic">
 
       <h1>Nitin Singh</h1>
-      <h2>Entry-Level Data Analyst</h2>
+      <h2>Data Analyst | Marketing Analytics & BI</h2>
+
+      <!-- LANGUAGE TOGGLE -->
+      <div class="lang-toggle">
+        <button onclick="setLanguage('en')">EN</button>
+        <button onclick="setLanguage('de')">DE</button>
+      </div>
 
       <p class="location">📍 Berlin, Germany</p>
 
-      <p class="tagline">
-        📊 Turning real-world data into clear insights.
+      <p class="tagline lang-en">
+        📊 Turning real-world data into structured, actionable insights.
+      </p>
+      <p class="tagline lang-de">
+        📊 Reale Daten in strukturierte, messbare Einblicke verwandeln.
       </p>
 
       <nav class="side-links">
         <a href="mailto:nitinsingh.web07@gmail.com">📧 Email</a>
         <a href="https://github.com/nitinsinghdm" target="_blank">💻 GitHub</a>
         <a href="https://linkedin.com/in/nitinsinghdm" target="_blank">🔗 LinkedIn</a>
+        <a href="Nitin_Singh_CV.pdf" target="_blank">📄 View CV</a>
       </nav>
 
     </aside>
@@ -41,17 +50,46 @@
       <section>
         <h3>👋 About</h3>
 
-        <div class="summary">
+        <!-- ENGLISH -->
+        <div class="summary lang-en">
           <p>
-            I am a result-oriented entry-level Data Analyst with project-based experience working on real-world datasets
-            across multiple domains. I work with SQL for data querying, Excel for data cleaning, analysis, and modeling,
-            and Tableau for data visualization and storytelling.
+            I am a Data Analyst specializing in marketing analytics, SQL-based data analysis,
+            and business intelligence reporting. I work with structured and semi-structured
+            datasets to extract meaningful insights that support strategic decision-making.
           </p>
 
           <p>
-            My work focuses on exploratory data analysis, identifying patterns and trends, and translating raw data into
-            clear KPIs and dashboards that answer business questions. I value structured thinking, data quality, and clarity,
-            and aim to support data-driven decision-making through well-organized analysis and actionable insights.
+            My expertise includes exploratory data analysis, KPI development, dashboard creation,
+            and performance monitoring across marketing and operational domains.
+            I focus on transforming raw data into clear, measurable business value.
+          </p>
+
+          <p>
+            Currently pursuing my M.Sc. in Data Analytics in Berlin, I am actively working
+            on large-scale public transport optimization and predictive modeling projects,
+            combining statistical techniques with practical business applications.
+          </p>
+        </div>
+
+        <!-- GERMAN -->
+        <div class="summary lang-de">
+          <p>
+            Ich bin Data Analyst mit Schwerpunkt auf Marketing-Analytics,
+            SQL-basierter Datenanalyse und Business-Intelligence-Reporting.
+            Ich arbeite mit strukturierten und semi-strukturierten Datensätzen,
+            um fundierte geschäftliche Einblicke zu gewinnen.
+          </p>
+
+          <p>
+            Meine Expertise umfasst explorative Datenanalyse, KPI-Entwicklung,
+            Dashboard-Erstellung und Performance-Monitoring in Marketing-
+            und operativen Bereichen.
+          </p>
+
+          <p>
+            Aktuell absolviere ich meinen Master in Data Analytics in Berlin
+            und arbeite an Projekten zur Optimierung des öffentlichen Verkehrs
+            sowie an prädiktiven Modellen mit praktischer Geschäftsanwendung.
           </p>
         </div>
       </section>
@@ -60,46 +98,162 @@
       <section>
         <h3>🧰 Tech Stack</h3>
 
-        <h4>Data & Querying</h4>
-        <p>SQL (Joins, CTEs, Subqueries, Aggregations, Window Functions)</p>
+        <div class="lang-en">
+          <h4>Data & Analysis</h4>
+          <p>SQL (Joins, CTEs, Window Functions)</p>
+          <p>Excel (Power Query, Pivot Tables, DAX)</p>
+          <p>Python (Pandas, NumPy, scikit-learn)</p>
 
-        <h4>Analysis & Modeling</h4>
-        <p>Excel (Power Query, Pivot Tables, DAX, Advanced Formulas)</p>
-        <p>Python (pandas, NumPy, scikit-learn)</p>
+          <h4>Visualization</h4>
+          <p>Tableau · Power BI (Basic) · Excel Dashboards</p>
 
-        <h4>Visualization & Reporting</h4>
-        <p>Tableau · Excel Dashboards</p>
+          <h4>Marketing & Tracking</h4>
+          <p>Google Analytics · Funnel Analysis · KPI Monitoring</p>
 
-        <h4>Tools</h4>
-        <p>Git · GitHub · VS Code</p>
+          <h4>Tools</h4>
+          <p>Git · GitHub · VS Code · WordPress</p>
+        </div>
+
+        <div class="lang-de">
+          <h4>Daten & Analyse</h4>
+          <p>SQL (Joins, CTEs, Window Functions)</p>
+          <p>Excel (Power Query, Pivot-Tabellen, DAX)</p>
+          <p>Python (Pandas, NumPy, scikit-learn)</p>
+
+          <h4>Visualisierung</h4>
+          <p>Tableau · Power BI (Grundkenntnisse) · Excel Dashboards</p>
+
+          <h4>Marketing & Tracking</h4>
+          <p>Google Analytics · Funnel-Analyse · KPI-Überwachung</p>
+
+          <h4>Tools</h4>
+          <p>Git · GitHub · VS Code · WordPress</p>
+        </div>
       </section>
 
       <!-- PROJECTS -->
       <section>
         <h3>🚀 Projects</h3>
 
-        <div class="project">
-          <h4>SQL Data Science Job Market Analysis</h4>
-          <p>
-            Analyzed data science job postings using advanced SQL techniques to identify salary trends,
-            role-based patterns, and in-demand skills across locations.
-          </p>
+        <!-- ENGLISH -->
+        <div class="lang-en">
+
+          <div class="project">
+            <h4>SQL Data Science Job Market Analysis</h4>
+            <p>
+              Analyzed 10,000+ job postings using advanced SQL techniques.
+              Identified in-demand skills and salary benchmarks across regions.
+            </p>
+          </div>
+
+          <div class="project">
+            <h4>Excel Data Analytics Dashboard</h4>
+            <p>
+              Processed 100,000+ records using Power Query and DAX
+              to build KPI dashboards and trend analysis models.
+            </p>
+          </div>
+
+          <div class="project">
+            <h4>Public Transport Delay Prediction</h4>
+            <p>
+              Developed a GTFS data pipeline in Python and built delay
+              prediction models achieving ~15% simulated delay reduction.
+            </p>
+          </div>
+
         </div>
 
-        <div class="project">
-          <h4>Excel Data Analytics Dashboard</h4>
-          <p>
-            Built interactive dashboards and KPIs using Power Query, Pivot Tables, and DAX
-            to transform raw data into actionable business insights.
-          </p>
+        <!-- GERMAN -->
+        <div class="lang-de">
+
+          <div class="project">
+            <h4>SQL Arbeitsmarktanalyse</h4>
+            <p>
+              Analyse von 10.000+ Stellenanzeigen mit fortgeschrittenem SQL.
+              Identifikation gefragter Fähigkeiten und Gehaltsbenchmarks.
+            </p>
+          </div>
+
+          <div class="project">
+            <h4>Excel Datenanalyse Dashboard</h4>
+            <p>
+              Verarbeitung von 100.000+ Datensätzen mit Power Query und DAX
+              zur Erstellung von KPI-Dashboards.
+            </p>
+          </div>
+
+          <div class="project">
+            <h4>Verspätungsvorhersage im öffentlichen Verkehr</h4>
+            <p>
+              Entwicklung einer GTFS-Datenpipeline in Python und ML-Modellen
+              zur Verspätungsvorhersage (~15% Reduktion).
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EXPERIENCE -->
+      <section>
+        <h3>💼 Experience</h3>
+
+        <!-- ENGLISH -->
+        <div class="lang-en">
+
+          <div class="project">
+            <h4>WhatYouTech</h4>
+            <p><strong>Performance Marketing Manager & Web Developer</strong><br>
+               Apr 2023 – Oct 2023 · 7 Months · Hybrid · Part-Time</p>
+            <ul>
+              <li>Analyzed campaign performance and conversion funnels using Google Analytics and SQL</li>
+              <li>Built KPI dashboards to monitor ROI, traffic growth, and sales performance</li>
+              <li>Conducted performance analysis to identify optimization opportunities</li>
+              <li>Collaborated with marketing and sales teams to deliver data-driven insights</li>
+            </ul>
+          </div>
+
+          <div class="project">
+            <h4>ThoughtStart</h4>
+            <p><strong>Web & Analytics Developer (WordPress)</strong><br>
+                Dec 2021 – June 2022 · 8 Months · Remote · Part-Time</p>
+            <ul>
+              <li>Developed and optimized LMS platform for international client</li>
+              <li>Integrated analytics tracking to monitor user engagement</li>
+              <li>Reduced bounce rate by 20% through data-driven optimization</li>
+              <li>Supported UX and conversion performance improvements</li>
+            </ul>
+          </div>
+
         </div>
 
-        <div class="project">
-          <h4>Public Transport Delay Prediction</h4>
-          <p>
-            Developed predictive models on GTFS public transport data using Python and machine learning,
-            achieving a simulated ~15% reduction in journey delays.
-          </p>
+        <!-- GERMAN -->
+        <div class="lang-de">
+
+          <div class="project">
+            <h4>WhatYouTech</h4>
+                 <p><strong>Performance Marketing Manager & Web-Entwickler</strong><br>
+                 Apr 2023 – Okt 2023 · 7 Monate · Hybrid · Teilzeit</p>
+            <ul>
+              <li>Analyse von Kampagnenleistung und Conversion-Funnels mit Google Analytics und SQL</li>
+              <li>Erstellung von KPI-Dashboards zur Überwachung von ROI und Traffic</li>
+              <li>Identifikation von Optimierungspotenzial durch Datenanalyse</li>
+              <li>Zusammenarbeit mit Marketing- und Vertriebsteams</li>
+            </ul>
+          </div>
+
+          <div class="project">
+              <h4>ThoughtStart</h4>
+                 <p><strong>Web- & Analytics-Entwickler (WordPress)</strong><br>
+                 Dez 2021 – Juni 2022 · 8 Monate · Remote · Teilzeit</p>
+            <ul>
+              <li>Entwicklung und Optimierung einer LMS-Plattform</li>
+              <li>Integration von Analytics-Tracking</li>
+              <li>Reduzierung der Absprungrate um 20 %</li>
+              <li>Unterstützung datenbasierter UX-Optimierung</li>
+            </ul>
+          </div>
+
         </div>
       </section>
 
@@ -107,22 +261,36 @@
       <section>
         <h3>🎓 Education</h3>
 
-        <p>
-          <strong>M.Sc. Data Analytics</strong><br>
-          Berlin School of Business & Innovation (BSBI), Berlin<br>
-          <span class="muted">2024 – 2025</span>
-        </p>
+        <div class="lang-en">
+          <p><strong>M.Sc. Data Analytics</strong><br>Berlin School of Business & Innovation<br>2024 – 2025</p>
+          <p><strong>B.E. Information Technology</strong><br>University of Mumbai<br>2019 – 2023</p>
+        </div>
 
-        <p>
-          <strong>B.E. Information Technology</strong><br>
-          University of Mumbai, India<br>
-          <span class="muted">2019 – 2023</span>
-        </p>
+        <div class="lang-de">
+          <p><strong>M.Sc. Data Analytics</strong><br>Berlin School of Business & Innovation<br>2024 – 2025</p>
+          <p><strong>B.E. Informationstechnologie</strong><br>University of Mumbai<br>2019 – 2023</p>
+        </div>
       </section>
 
     </main>
 
   </div>
+
+  <!-- LANGUAGE SCRIPT -->
+  <script>
+    function setLanguage(lang) {
+      const en = document.querySelectorAll('.lang-en');
+      const de = document.querySelectorAll('.lang-de');
+
+      if (lang === 'de') {
+        en.forEach(el => el.style.display = 'none');
+        de.forEach(el => el.style.display = 'block');
+      } else {
+        en.forEach(el => el.style.display = 'block');
+        de.forEach(el => el.style.display = 'none');
+      }
+    }
+  </script>
 
 </body>
 </html>
