@@ -1,8 +1,8 @@
 # 🧠 Nitin Singh – Data Analyst Portfolio
 
-This repository contains the source code for my **personal data analytics portfolio**, built to showcase my background, technical skills, and hands-on analytics projects.
+This repository contains the source code for my **personal Data Analyst portfolio**, built to showcase my technical skills, analytics experience, and applied projects across business and operational domains.
 
-The portfolio is designed to be **clean, minimal, and professional**, with a strong focus on content clarity and real-world problem solving rather than visual gimmicks.
+The portfolio follows a **minimal, structured, dark-themed design**, with a strong emphasis on clarity, analytical thinking, and real-world problem solving.
 
 🌐 **Live Portfolio:**  
 👉 https://nitinsinghdm.github.io
@@ -11,56 +11,84 @@ The portfolio is designed to be **clean, minimal, and professional**, with a str
 
 ## 👋 About Me
 
-I am a **result-oriented entry-level Data Analyst** with project-based experience working on real-world datasets across multiple domains.
+I am an **entry-level Data Analyst based in Berlin**, with hands-on experience analyzing structured datasets across marketing, job market, and public transport domains.
 
-My work focuses on:
+My core strengths include:
+
 - Exploratory Data Analysis (EDA)
-- KPI design and dashboarding
-- Translating complex data into clear, actionable insights
+- KPI tracking and performance monitoring
+- Dashboard development and reporting
+- Funnel analysis and marketing analytics
+- Translating complex data into actionable insights
 
-I primarily work with **SQL, Excel, Python, and Tableau**, and enjoy building structured, end-to-end analytics workflows that support data-driven decision-making.
+I work primarily with **SQL, Excel, Python, Tableau, and Google Analytics**, focusing on building structured, end-to-end analytics workflows that support data-driven decision-making.
 
 ---
 
 ## 🧰 Tech Stack
 
-**Data & Querying**
+### Data & Querying
 - SQL (Joins, CTEs, Subqueries, Aggregations, Window Functions)
 
-**Analysis & Modeling**
+### Analysis & Modeling
 - Excel (Power Query, Pivot Tables, DAX, Advanced Formulas)
 - Python (pandas, NumPy, scikit-learn)
 
-**Visualization & Reporting**
+### Visualization & Reporting
 - Tableau
 - Excel Dashboards
+- KPI Reporting
 
-**Tools & Platforms**
+### Marketing & Tracking
+- Google Analytics
+- Conversion Funnel Analysis
+- Customer Segmentation
+- Marketing KPI Monitoring
+
+### Tools & Platforms
 - Git & GitHub
 - VS Code
+- WordPress
 
 ---
 
 ## 🚀 Featured Projects
 
 ### 📊 SQL Data Science Job Market Analysis
-Analyzed data science job postings using advanced SQL techniques to identify salary trends, role-based patterns, and in-demand skills across locations.
 
-**Skills used:** SQL, Data Analysis, Aggregations, Window Functions
+Analyzed 10,000+ job postings using advanced SQL techniques to identify:
+
+- Salary benchmarks by region
+- In-demand technical skills
+- Role-based trends and hiring patterns
+
+**Skills used:** SQL, Aggregations, CTEs, Window Functions, Data Analysis
 
 ---
 
 ### 📈 Excel Data Analytics Dashboard
-Built interactive dashboards and KPIs using Power Query, Pivot Tables, and DAX to transform raw datasets into actionable business insights.
+
+Transformed raw datasets into structured reporting models using:
+
+- Power Query for data cleaning
+- Pivot Tables & DAX for modeling
+- Interactive dashboards for KPI monitoring
+
+Reduced manual reporting effort and improved visibility into revenue and performance metrics.
 
 **Skills used:** Excel, Power Query, DAX, Dashboarding
 
 ---
 
 ### 🚇 Public Transport Delay Prediction
-Developed predictive models on GTFS public transport data using Python and machine learning, achieving a simulated ~15% reduction in journey delays.
 
-**Skills used:** Python, Machine Learning, Feature Engineering
+Built predictive models using GTFS transit data and machine learning techniques to improve schedule reliability.
+
+- Applied feature engineering on transit datasets
+- Developed regression and classification models
+- Achieved a simulated ~15% reduction in journey delays
+
+**Skills used:** Python, Machine Learning, Feature Engineering, Data Preprocessing
 
 ---
 
@@ -69,10 +97,40 @@ Developed predictive models on GTFS public transport data using Python and machi
 **M.Sc. Data Analytics**  
 Berlin School of Business & Innovation (BSBI), Berlin  
 2024 – 2025  
+Grade: 2.3  
 
 **B.E. Information Technology**  
 University of Mumbai, India  
 2019 – 2023  
+CGPA: 8.6 / 10  
+
+---
+
+## 📚 Publication
+
+**E-Medic Champ Mental Health Analysis Application**  
+Published in IJRTI – May 2023  
+
+---
+
+## 🏆 Certifications
+
+- SQL Intermediate – SoloLearn (2026)
+- Introduction to SQL – SoloLearn (2026)
+- Build a Full Website using WordPress – Coursera (2023)
+- Java Certification – SoloLearn (2021)
+
+---
+
+## 🛠️ Technical Overview
+
+- Built using **HTML & CSS**
+- Custom dark theme design
+- Fully responsive layout
+- Hosted on **GitHub Pages**
+- Structured for clarity and recruiter readability
+
+The design prioritizes analytical substance and professional presentation over visual gimmicks.
 
 ---
 
@@ -84,12 +142,4 @@ University of Mumbai, India
 
 ---
 
-## 🛠️ Notes
-
-- This portfolio is built using **HTML & CSS** and hosted on **GitHub Pages**.
-- Additional project repositories and case studies will be added incrementally.
-- The design emphasizes readability, simplicity, and professional presentation.
-
----
-
-⭐ If you’re a recruiter or collaborator, feel free to reach out!
+⭐ If you’re a recruiter, hiring manager, or collaborator, feel free to connect.
