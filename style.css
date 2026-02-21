@@ -89,12 +89,40 @@ body {
 }
 
 /* =====================
+   LANGUAGE TOGGLE
+===================== */
+.lang-toggle {
+  margin: 15px 0;
+}
+
+.lang-toggle button {
+  background: none;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 4px 10px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.8rem;
+  transition: background 0.2s ease;
+}
+
+.lang-toggle button:hover {
+  background-color: #333;
+}
+
+.lang-de {
+  display: none;
+}
+
+/* =====================
    SIDE LINKS
 ===================== */
 .side-links {
   display: flex;
   flex-direction: column;
   gap: 14px;
+  margin-top: 20px;
 }
 
 .side-links a {
@@ -186,6 +214,75 @@ p {
 }
 
 /* =====================
+   TECH STACK GRID
+===================== */
+.tech-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-top: 20px;
+}
+
+.tech-grid ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+
+.tech-grid li {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+  position: relative;
+  padding-left: 18px;
+}
+
+.tech-grid li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+/* =====================
+   CERTIFICATIONS & PUBLICATION
+===================== */
+.cert-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.cert-left {
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+.cert-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.cert-right a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  background: var(--border-light);
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.cert-right a:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+/* =====================
    RESPONSIVE
 ===================== */
 @media (max-width: 900px) {
@@ -208,24 +305,15 @@ p {
     width: 100px;
     height: 100px;
   }
-}
-.lang-de {
-  display: none;
-}
 
-.lang-toggle {
-  margin: 15px 0;
-}
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 
-.lang-toggle button {
-  background: none;
-  border: 1px solid #444;
-  color: #fff;
-  padding: 4px 10px;
-  margin-right: 5px;
-  cursor: pointer;
-}
-
-.lang-toggle button:hover {
-  background-color: #333;
+  .cert-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
 }
