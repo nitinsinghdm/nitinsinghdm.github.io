@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /* =====================
-   VARIABLES (DARK THEME)
+   VARIABLES
 ===================== */
 :root {
   --bg-main: #0e0e0e;
@@ -25,13 +25,18 @@
 }
 
 /* =====================
-   BASE
+   BASE (FIXED FONT)
 ===================== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   background: var(--bg-main);
   color: var(--text-main);
-  line-height: 1.8;
+  font-size: 14.8px;
+  line-height: 1.65;
 }
 
 /* =====================
@@ -53,6 +58,7 @@ body {
   position: sticky;
   top: 0;
   height: 100vh;
+  box-shadow: 8px 0 40px rgba(0,0,0,0.6);
 }
 
 .profile-pic {
@@ -62,80 +68,43 @@ body {
   object-fit: cover;
   margin-bottom: 22px;
   border: 2px solid var(--accent);
+  transition: all 0.5s ease;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(122,122,122,0.4);
 }
 
 .sidebar h1 {
   font-size: 2rem;
-  font-weight: 700;
 }
 
 .sidebar h2 {
   font-size: 0.9rem;
-  font-weight: 500;
-  margin-top: 6px;
   color: var(--text-muted);
 }
 
-.location {
-  margin-top: 12px;
+.location, .tagline {
   font-size: 0.85rem;
   color: var(--text-muted);
-}
-
-.tagline {
-  margin: 24px 0;
-  font-size: 0.9rem;
-  color: var(--text-muted);
+  margin-top: 12px;
 }
 
 /* =====================
-   LANGUAGE TOGGLE
+   LINKS
 ===================== */
-.lang-toggle {
-  margin: 15px 0;
-}
-
-.lang-toggle button {
-  background: none;
-  border: 1px solid #444;
-  color: #fff;
-  padding: 4px 10px;
-  margin-right: 5px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.8rem;
-  transition: background 0.2s ease;
-}
-
-.lang-toggle button:hover {
-  background-color: #333;
-}
-
-.lang-de {
-  display: none;
-}
-
-/* =====================
-   SIDE LINKS
-===================== */
-.side-links {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 20px;
-}
-
 .side-links a {
-  text-decoration: none;
+  display: block;
+  margin-top: 12px;
   color: var(--text-main);
-  font-size: 0.9rem;
-  font-weight: 500;
-  opacity: 0.85;
-  transition: opacity 0.2s ease;
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .side-links a:hover {
-  opacity: 1;
+  transform: translateX(6px);
+  color: #fff;
 }
 
 /* =====================
@@ -143,10 +112,28 @@ body {
 ===================== */
 .content {
   padding: 70px 90px;
+  max-width: 1100px;
 }
 
+/* =====================
+   SECTIONS (SMOOTH)
+===================== */
 section {
-  margin-bottom: 90px;
+  margin-bottom: 80px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.1s; }
+section:nth-child(3) { animation-delay: 0.2s; }
+section:nth-child(4) { animation-delay: 0.3s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =====================
@@ -155,131 +142,114 @@ section {
 h3 {
   font-size: 1.6rem;
   font-weight: 600;
-  margin-bottom: 22px;
-  position: relative;
-}
-
-h3::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 36px;
-  height: 2px;
-  background: var(--accent);
+  margin-bottom: 20px;
 }
 
 h4 {
   font-size: 0.95rem;
-  font-weight: 600;
-  margin-top: 26px;
   margin-bottom: 6px;
   color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 /* =====================
    TEXT
 ===================== */
 p {
-  font-size: 0.92rem;
   color: var(--text-muted);
-  max-width: 780px;
-}
-
-.summary p {
-  margin-bottom: 18px;
-}
-
-.muted {
-  color: var(--text-muted);
-  font-size: 0.85rem;
+  margin-bottom: 12px;
+  max-width: 700px;
 }
 
 /* =====================
-   PROJECTS
+   PROJECT CARDS
 ===================== */
 .project {
-  margin-top: 26px;
-  padding-left: 22px;
+  margin-top: 24px;
+  padding: 18px 22px;
   border-left: 3px solid var(--accent);
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  transition: all 0.4s ease;
 }
 
-.project h4 {
-  margin-top: 0;
-  color: var(--text-main);
-  text-transform: none;
-  letter-spacing: normal;
+.project:hover {
+  transform: translateY(-6px);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
 
 /* =====================
-   TECH STACK GRID
+   LIST ITEMS
 ===================== */
-.tech-grid {
+li {
+  margin-bottom: 5px;
+  transition: all 0.25s ease;
+}
+
+li:hover {
+  transform: translateX(5px);
+  color: #fff;
+}
+
+/* =====================
+   SKILLS BOXES
+===================== */
+.skills-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
   margin-top: 20px;
 }
 
-.tech-grid ul {
-  list-style: none;
-  padding-left: 0;
-  margin-top: 8px;
+.skill-box {
+  background: rgba(255,255,255,0.03);
+  padding: 18px;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
 }
 
-.tech-grid li {
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  margin-bottom: 8px;
-  position: relative;
-  padding-left: 18px;
+.skill-box:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.06);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
-.tech-grid li::before {
-  content: "•";
-  position: absolute;
-  left: 0;
-  color: var(--accent);
+.skill-box p {
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
 
 /* =====================
-   CERTIFICATIONS & PUBLICATION
+   CERTIFICATIONS
 ===================== */
 .cert-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 16px 0;
+  padding: 12px 0;
   border-bottom: 1px solid var(--border-light);
 }
 
-.cert-left {
-  font-size: 0.92rem;
-  color: var(--text-main);
-}
-
-.cert-right {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-
 .cert-right a {
-  text-decoration: none;
-  font-size: 0.9rem;
   background: var(--border-light);
   padding: 4px 8px;
   border-radius: 4px;
-  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.cert-right a:hover {
-  transform: translateY(-2px);
-  opacity: 1;
+/* =====================
+   BUTTON
+===================== */
+.lang-toggle button {
+  border: 1px solid #444;
+  background: none;
+  color: #fff;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.lang-toggle button:hover {
+  background: #333;
 }
 
 /* =====================
@@ -290,30 +260,11 @@ p {
     grid-template-columns: 1fr;
   }
 
-  .sidebar {
-    position: relative;
-    height: auto;
-    border-right: none;
-    border-bottom: 1px solid var(--border-light);
-  }
-
   .content {
-    padding: 50px 30px;
+    padding: 40px 25px;
   }
 
-  .profile-pic {
-    width: 100px;
-    height: 100px;
-  }
-
-  .tech-grid {
+  .skills-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
-  }
-
-  .cert-item {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 6px;
   }
 }
