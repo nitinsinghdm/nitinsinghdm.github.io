@@ -1,199 +1,424 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="UTF-8">
-  <title>Nitin Nilesh Singh | Data Analyst</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nitin Nilesh Singh - Data Analyst in Berlin specializing in SQL, Python, and product analytics.">
+
+  <title>Nitin Singh | Data Analyst</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="layout">
+<!-- NOISE -->
+<div class="noise"></div>
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
-    <img src="profiledp.png" alt="Nitin Nilesh Singh" class="profile-pic">
+<!-- LEFT BAR -->
+<div class="fixed-bar">
 
-    <h1>Nitin Nilesh Singh</h1>
-    <h2>Data Analyst</h2>
+  <div class="fixed-top">
+    <p class="tiny-label">DATA ANALYST / BERLIN</p>
+  </div>
 
-    <div class="lang-toggle">
-      <button onclick="setLanguage('en')">EN</button>
-      <button onclick="setLanguage('de')">DE</button>
-    </div>
+  <div class="fixed-bottom">
 
-    <p class="location">📍 Berlin, Germany</p>
-    <p class="location">📞 +49 1573 8774794</p>
-    <p class="location">📧 nitinsingh.web07@gmail.com</p>
+    <a href="mailto:nitinsingh.web07@gmail.com">
+      nitinsingh.web07@gmail.com
+    </a>
 
-    <p class="tagline">
-      📊 Turning data into decisions that drive growth.
-    </p>
+    <a href="https://linkedin.com/in/nitinsinghdm" target="_blank">
+      LinkedIn
+    </a>
 
-    <nav class="side-links">
-      <a href="mailto:nitinsingh.web07@gmail.com">📧 Email</a>
-      <a href="https://github.com/nitinsinghdm" target="_blank">💻 GitHub</a>
-      <a href="https://linkedin.com/in/nitinsinghdm" target="_blank">🔗 LinkedIn</a>
-      <a href="Nitin_Singh_DataAnalyst.pdf" target="_blank">📄 View CV</a>
-    </nav>
-  </aside>
+    <a href="https://github.com/nitinsinghdm" target="_blank">
+      GitHub
+    </a>
 
-  <!-- MAIN CONTENT -->
-  <main class="content">
+    <a href="assets/nitin_singh_data_analyst.pdf" target="_blank">
+      Resume
+    </a>
 
-    <!-- SUMMARY -->
-    <section>
-      <h3>👋 Summary</h3>
-      <div class="summary">
-        <p>
-        I don’t just analyze data — I focus on the decisions it should drive.
-        </p>
+  </div>
 
-        <p>
-        Data Analyst with 1+ year experience in startup environments, owning analytics, dashboards, and performance tracking across product and marketing workflows.
-        </p>
-
-        <p>
-        I specialize in SQL-driven funnel analysis, A/B testing, and segmentation to identify user behavior patterns and improve conversion, retention, and marketing efficiency.
-        </p>
-
-        <p>
-        My work focuses on translating messy data into clear insights that teams can act on — whether it’s optimizing campaigns, improving user journeys, or prioritizing high-impact opportunities.
-        </p>
-      </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section>
-      <h3>🧰 Skills</h3>
-
-      <div class="skills-grid">
-
-        <div class="skill-box">
-          <h4>SQL & Data</h4>
-          <p>SQL (CTEs, Joins, Window Functions, Optimization), BigQuery, MySQL, PostgreSQL, dbt, Databricks</p>
-        </div>
-
-        <div class="skill-box">
-          <h4>Analytics</h4>
-          <p>Funnel Analysis, Cohort Analysis, Retention, A/B Testing, KPI Development, Segmentation</p>
-        </div>
-
-        <div class="skill-box">
-          <h4>BI & Visualization</h4>
-          <p>Power BI, Tableau, Looker Studio, Excel</p>
-        </div>
-
-        <div class="skill-box">
-          <h4>Tools & Programming</h4>
-          <p>Python (Pandas, NumPy, Matplotlib), Google Analytics, Git, Jupyter Notebook</p>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section>
-      <h3>💼 Experience</h3>
-
-      <div class="project">
-        <h4>WhatYouTech</h4>
-        <p class="muted"><strong>Performance Marketing & Analytics Analyst</strong> | Apr 2023 – Oct 2023</p>
-        <ul>
-          <li>Owned analytics for 6 campaigns (€3K–€8K/month), improving conversion rate from ~2.1% to ~2.7%</li>
-          <li>Built SQL funnel (impressions → clicks → conversions), identified drop-offs and improved conversion</li>
-          <li>Performed cohort and retention analysis, improving ROI by ~15–20%</li>
-          <li>Designed A/B tests (8K–15K users), improving CTR by ~10–12%</li>
-          <li>Built dashboards enabling faster campaign and budget decisions</li>
-          <li>Segmented users to optimize spend, reducing CPA by ~10%</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h4>ThoughtStart</h4>
-        <p class="muted"><strong>Web & Analytics Developer</strong> | Dec 2021 – Jun 2022</p>
-        <ul>
-          <li>Owned analytics tracking for LMS platform, capturing full user journey</li>
-          <li>Analyzed ~10K+ users/month, reducing bounce rate from ~58% to ~46%</li>
-          <li>Improved performance (load time ↓ ~30%), increasing engagement</li>
-          <li>Worked with founder to optimize flows, increasing enrollments by ~40–50%</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section>
-      <h3>🚀 Projects</h3>
-
-      <!-- TOP PROJECT (ONGOING) -->
-      <div class="project">
-        <h4>Transport Delay Intelligence System | Python, GTFS | 2025–Present</h4>
-        <ul>
-          <li>Building a transport delay analysis system using 34M+ GTFS records to study urban mobility patterns</li>
-          <li>Engineering time-based features (inter-stop travel time, delay indicators) using grouped time-series transformations</li>
-          <li>Cleaning and filtering raw transit data by removing anomalies and isolating Berlin-specific routes</li>
-          <li>Integrating multiple GTFS tables (stop_times, stops, trips, routes) into a unified dataset</li>
-          <li>Developing route-level KPIs (travel time, frequency, delay trends) for analysis and dashboard use</li>
-          <li>Creating a modular Python (Pandas) pipeline for scalable preprocessing and feature engineering</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h4>E-Commerce Sales Analysis | SQL, BigQuery | 2026</h4>
-        <ul>
-          <li>Analyzed 1M+ transactions to identify revenue drivers and customer segments</li>
-          <li>Built funnel (view → cart → purchase), identifying ~30% drop-off</li>
-          <li>Developed KPI dashboard tracking revenue and conversion</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h4>Germany Data Job Market Analysis | Python | 2026</h4>
-        <ul>
-          <li>Processed 50K+ job postings to analyze skill demand and salary trends</li>
-          <li>Built preprocessing pipeline reducing manual effort by ~40%</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <h4>dbt Databricks Data Pipeline | SQL, dbt | 2026</h4>
-        <ul>
-          <li>Designed medallion architecture (Bronze → Silver → Gold)</li>
-          <li>Built dbt models with validation tests for data quality</li>
-          <li>Automated transformations improving pipeline efficiency</li>
-        </ul>
-      </div>
-
-    </section>
-
-    <!-- EDUCATION -->
-    <section>
-      <h3>🎓 Education</h3>
-      <p><strong>M.Sc. Data Analytics</strong> | Berlin School of Business & Innovation</p>
-      <p><strong>B.E. Information Technology</strong> | University of Mumbai</p>
-    </section>
-
-    <!-- LANGUAGES -->
-    <section>
-      <h3>🌍 Languages</h3>
-      <p>English – Fluent</p>
-      <p>Deutsch – B1 Intermediate</p>
-    </section>
-
-  </main>
 </div>
 
-<script>
-function setLanguage(lang) {
-  if (lang === 'de') {
-    document.body.classList.add('german');
-  } else {
-    document.body.classList.remove('german');
-  }
-}
-</script>
+<!-- MAIN -->
+<main>
+
+  <!-- HERO -->
+  <section class="hero reveal">
+
+    <p class="hero-small">
+      Portfolio / 2026
+    </p>
+
+    <div class="hero-layout">
+
+      <div class="hero-text">
+
+        <h1>
+          Understanding<br>
+          movement,<br>
+          behavior,<br>
+          and invisible<br>
+          patterns.
+        </h1>
+
+      </div>
+
+      <div class="hero-image">
+
+        <img
+          src="assets/images/profile_dp.png"
+          alt="Nitin Singh"
+        >
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about reveal">
+
+    <div class="about-grid">
+
+      <div class="about-left">
+
+        <h2>
+          Hello.<br>
+          I’m Nitin Singh.
+        </h2>
+
+      </div>
+
+      <div class="about-right">
+
+        <p>
+          A Berlin-based data analyst exploring forecasting,
+          behavioral patterns,
+          movement,
+          and large-scale systems through data.
+        </p>
+
+        <p>
+          I enjoy understanding why systems behave differently under pressure —
+          from transport congestion and customer drop-offs
+          to hiring trends and operational inefficiencies.
+        </p>
+
+        <p>
+          I became obsessed with understanding why systems slow down,
+          why users disappear halfway through funnels,
+          and how invisible patterns shape real-world systems.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services reveal">
+
+    <p class="section-label">
+      WHAT I WORK ON
+    </p>
+
+    <div class="services-grid">
+
+      <div class="service-item">Transport Intelligence</div>
+      <div class="service-item">Forecasting Systems</div>
+      <div class="service-item">Behavioral Analytics</div>
+      <div class="service-item">Urban Mobility</div>
+      <div class="service-item">Funnel Analysis</div>
+      <div class="service-item">Product Analytics</div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects reveal">
+
+    <p class="section-label">
+      SELECTED PROJECTS
+    </p>
+
+    <!-- PROJECT -->
+    <div class="project-block">
+
+      <div class="project-layout">
+
+        <!-- LEFT -->
+        <div class="project-heading">
+
+          <h3>
+            Transport Network Analysis & Optimization System
+          </h3>
+
+        </div>
+
+        <!-- RIGHT -->
+        <div class="carousel-container">
+
+          <button class="carousel-btn prev">&#8592;</button>
+
+          <div class="carousel-track">
+
+            <img
+              src="assets/images/gtfs/gtfs_dashboard.png"
+              class="carousel-image active"
+            >
+
+            <img
+              src="assets/images/gtfs/busy_routes.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/gtfs/delay_by_mode.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/gtfs/travel_time_distribution.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/gtfs/travel_time_vs_demand.png"
+              class="carousel-image"
+            >
+
+          </div>
+
+          <button class="carousel-btn next">&#8594;</button>
+
+        </div>
+
+      </div>
+
+      <div class="project-content">
+
+        <p>
+          Processed and analyzed 34M+ GTFS records
+          to identify congestion behavior,
+          route inefficiencies,
+          delay propagation,
+          and operational variability across Berlin transport systems.
+        </p>
+
+        <p>
+          Built forecasting models and analytics systems
+          to study peak-hour movement patterns
+          and network optimization opportunities.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- PROJECT -->
+    <div class="project-block">
+
+      <div class="project-layout">
+
+        <div class="project-heading">
+
+          <h3>
+            Germany Data Job Market Analysis
+          </h3>
+
+        </div>
+
+        <div class="carousel-container">
+
+          <button class="carousel-btn prev">&#8592;</button>
+
+          <div class="carousel-track">
+
+            <img
+              src="assets/images/data_jobs/number_of_jobs_per_company.png"
+              class="carousel-image active"
+            >
+
+            <img
+              src="assets/images/data_jobs/number_of_jobs_per_country.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/data_jobs/trending_top_skills_for_data_analyst_in_de.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/data_jobs/skills_for_data_analysts_in_de.png"
+              class="carousel-image"
+            >
+
+          </div>
+
+          <button class="carousel-btn next">&#8594;</button>
+
+        </div>
+
+      </div>
+
+      <div class="project-content">
+
+        <p>
+          Analyzed 50K+ job postings across Germany
+          to understand hiring trends,
+          SQL demand,
+          salary patterns,
+          and BI ecosystem shifts.
+        </p>
+
+        <p>
+          Built preprocessing pipelines,
+          skill-demand analysis,
+          and market segmentation visualizations
+          to understand the evolving analytics landscape.
+        </p>
+
+      </div>
+
+    </div>
+
+    <!-- PROJECT -->
+    <div class="project-block">
+
+      <div class="project-layout">
+
+        <div class="project-heading">
+
+          <h3>
+            E-Commerce Sales Performance Analysis
+          </h3>
+
+        </div>
+
+        <div class="carousel-container">
+
+          <button class="carousel-btn prev">&#8592;</button>
+
+          <div class="carousel-track">
+
+            <img
+              src="assets/images/ecommerce/overview_dashboard.png"
+              class="carousel-image active"
+            >
+
+            <img
+              src="assets/images/ecommerce/revenue_analysis.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/ecommerce/product_analysis.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/ecommerce/geographic_analysis.png"
+              class="carousel-image"
+            >
+
+          </div>
+
+          <button class="carousel-btn next">&#8594;</button>
+
+        </div>
+
+      </div>
+
+      <div class="project-content">
+
+        <p>
+          Explored customer behavior,
+          revenue patterns,
+          checkout abandonment,
+          and purchasing trends using 1M+ transactions.
+        </p>
+
+        <p>
+          Built KPI dashboards,
+          conversion funnel analysis,
+          and segmentation insights
+          to identify revenue optimization opportunities.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section class="experience reveal">
+
+    <p class="section-label">
+      EXPERIENCE
+    </p>
+
+    <div class="exp-row">
+
+      <div>2023</div>
+      <div>WhatYouTech</div>
+      <div>Performance Marketing & Analytics Analyst</div>
+
+    </div>
+
+    <div class="exp-row">
+
+      <div>2021</div>
+      <div>ThoughtStart</div>
+      <div>Web & Analytics Developer</div>
+
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact reveal">
+
+    <h2>
+      Let’s build something meaningful with data.
+    </h2>
+
+    <div class="contact-links">
+
+      <a href="mailto:nitinsingh.web07@gmail.com">
+        nitinsingh.web07@gmail.com
+      </a>
+
+      <a href="https://linkedin.com/in/nitinsinghdm">
+        LinkedIn
+      </a>
+
+      <a href="https://github.com/nitinsinghdm">
+        GitHub
+      </a>
+
+    </div>
+
+  </section>
+
+</main>
+
+<script src="script.js"></script>
 
 </body>
 </html>
