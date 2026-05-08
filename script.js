@@ -76,7 +76,7 @@ carousels.forEach((carousel) => {
    LANGUAGE SWITCH
 ========================= */
 
-function setLanguage(lang){
+function updateButtons(lang){
 
   const buttons = document.querySelectorAll(".lang-btn");
 
@@ -84,22 +84,41 @@ function setLanguage(lang){
     btn.classList.remove("active");
   });
 
+  buttons.forEach((btn) => {
+
+    if(btn.innerText.toLowerCase() === lang){
+      btn.classList.add("active");
+    }
+
+  });
+
+}
+
+/* =========================
+   LANGUAGE FUNCTION
+========================= */
+
+function setLanguage(lang){
+
+  updateButtons(lang);
+
   /* =========================
      ENGLISH
   ========================= */
 
   if(lang === "en"){
 
-    buttons[0].classList.add("active");
-
     document.documentElement.lang = "en";
 
     /* SIDEBAR */
 
     document.getElementById("sidebarLabel").innerHTML =
-      "DATA ANALYST / BERLIN";
+      "DATA ANALYST / GERMANY";
 
     document.getElementById("resumeText").innerHTML =
+      "Resume";
+
+    document.getElementById("mobileResumeText").innerHTML =
       "Resume";
 
     /* HERO */
@@ -238,6 +257,26 @@ function setLanguage(lang){
     document.getElementById("exp2").innerHTML =
       "Web & Analytics Developer";
 
+    document.getElementById("exp1desc").innerHTML =
+      `Worked across campaign analytics,
+      conversion funnels,
+      audience segmentation,
+      and performance optimization.
+
+      Built reporting systems to analyze customer behavior,
+      identify drop-offs,
+      improve ROI,
+      and support data-driven campaign decisions across multiple marketing channels.`;
+
+    document.getElementById("exp2desc").innerHTML =
+      `Built and optimized analytics tracking systems
+      for an LMS platform used by thousands of learners.
+
+      Worked closely with product and founder teams
+      to improve engagement,
+      reduce bounce rates,
+      and better understand user learning behavior.`;
+
     /* CONTACT */
 
     document.getElementById("contactTitle").innerHTML =
@@ -251,16 +290,17 @@ function setLanguage(lang){
 
   if(lang === "de"){
 
-    buttons[1].classList.add("active");
-
     document.documentElement.lang = "de";
 
     /* SIDEBAR */
 
     document.getElementById("sidebarLabel").innerHTML =
-      "DATA ANALYST / BERLIN";
+      "DATA ANALYST / DEUTSCHLAND";
 
     document.getElementById("resumeText").innerHTML =
+      "Lebenslauf";
+
+    document.getElementById("mobileResumeText").innerHTML =
       "Lebenslauf";
 
     /* HERO */
@@ -282,7 +322,7 @@ function setLanguage(lang){
       Ich bin Nitin Singh.`;
 
     document.getElementById("aboutText1").innerHTML =
-      `Ein Data Analyst aus Berlin mit Fokus auf Prognosen,
+      `Ein Data Analyst aus Deutschland mit Fokus auf Prognosen,
       Verhaltensmuster,
       Bewegung,
       und große Datensysteme.`;
@@ -351,7 +391,7 @@ function setLanguage(lang){
       zur Untersuchung von Verkehrsverhalten,
       Verspätungen,
       Engpässen
-      und Netzwerkeffizienz im Berliner Verkehrssystem.`;
+      und Netzwerkeffizienz im Verkehrssystem.`;
 
     document.getElementById("project1Text2").innerHTML =
       `Entwicklung von Prognosemodellen
@@ -400,6 +440,25 @@ function setLanguage(lang){
     document.getElementById("exp2").innerHTML =
       "Web & Analytics Entwickler";
 
+    document.getElementById("exp1desc").innerHTML =
+      `Arbeit an Kampagnenanalysen,
+      Conversion Funnels,
+      Zielgruppensegmentierung
+      und Performanceoptimierung.
+
+      Entwicklung von Reportingsystemen
+      zur Analyse von Nutzerverhalten,
+      ROI-Verbesserung
+      und datenbasierten Entscheidungen.`;
+
+    document.getElementById("exp2desc").innerHTML =
+      `Entwicklung und Optimierung von Analytics-Tracking-Systemen
+      für eine LMS-Plattform mit tausenden Nutzern.
+
+      Zusammenarbeit mit Produkt- und Gründerteams
+      zur Verbesserung von Engagement
+      und Nutzerverhalten.`;
+
     /* CONTACT */
 
     document.getElementById("contactTitle").innerHTML =
@@ -408,3 +467,7 @@ function setLanguage(lang){
   }
 
 }
+
+/* DEFAULT */
+
+setLanguage("en");

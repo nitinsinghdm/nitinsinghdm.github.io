@@ -18,19 +18,67 @@
 
 <body>
 
+<!-- MOBILE TOPBAR -->
+
+<div class="mobile-topbar">
+
+  <div class="mobile-left">
+
+    <p>
+      Nitin Singh
+    </p>
+
+  </div>
+
+  <div class="mobile-right">
+
+    <!-- LANGUAGE -->
+
+    <div class="mobile-language-switch">
+
+      <button class="lang-btn active" onclick="setLanguage('en')">
+        EN
+      </button>
+
+      <button class="lang-btn" onclick="setLanguage('de')">
+        DE
+      </button>
+
+    </div>
+
+    <!-- RESUME -->
+
+    <a
+      href="assets/nitin_singh_data_analyst.pdf"
+      target="_blank"
+      class="mobile-resume"
+      id="mobileResumeText"
+    >
+      Resume
+    </a>
+
+  </div>
+
+</div>
+
 <!-- NOISE -->
+
 <div class="noise"></div>
 
 <!-- LEFT BAR -->
+
 <div class="fixed-bar">
 
   <div class="fixed-top">
+
     <p class="tiny-label" id="sidebarLabel">
-      DATA ANALYST / BERLIN
+      DATA ANALYST / GERMANY
     </p>
+
   </div>
 
   <!-- LANGUAGE -->
+
   <div class="language-switch">
 
     <button class="lang-btn active" onclick="setLanguage('en')">
@@ -44,6 +92,7 @@
   </div>
 
   <!-- LINKS -->
+
   <div class="fixed-bottom">
 
     <a href="mailto:nitinsingh.web07@gmail.com">
@@ -58,7 +107,11 @@
       GitHub
     </a>
 
-    <a href="assets/nitin_singh_data_analyst.pdf" target="_blank" id="resumeText">
+    <a
+      href="assets/nitin_singh_data_analyst.pdf"
+      target="_blank"
+      id="resumeText"
+    >
       Resume
     </a>
 
@@ -67,9 +120,11 @@
 </div>
 
 <!-- MAIN -->
+
 <main>
 
   <!-- HERO -->
+
   <section class="hero reveal">
 
     <p class="hero-small" id="heroSmall">
@@ -78,17 +133,23 @@
 
     <div class="hero-layout">
 
+      <!-- LEFT -->
+
       <div class="hero-text">
 
         <h1 id="heroTitle">
+
           Understanding<br>
           movement,<br>
           behavior,<br>
           and invisible<br>
           patterns.
+
         </h1>
 
       </div>
+
+      <!-- RIGHT -->
 
       <div class="hero-image">
 
@@ -104,38 +165,51 @@
   </section>
 
   <!-- ABOUT -->
+
   <section class="about reveal">
 
     <div class="about-grid">
 
+      <!-- LEFT -->
+
       <div class="about-left">
 
         <h2 id="aboutTitle">
+
           Hello.<br>
           I’m Nitin Singh.
+
         </h2>
 
       </div>
 
+      <!-- RIGHT -->
+
       <div class="about-right">
 
         <p id="aboutText1">
+
           A Berlin-based data analyst exploring forecasting,
           behavioral patterns,
           movement,
           and large-scale systems through data.
+
         </p>
 
         <p id="aboutText2">
+
           I enjoy understanding why systems behave differently under pressure —
           from transport congestion and customer drop-offs
           to hiring trends and operational inefficiencies.
+
         </p>
 
         <p id="aboutText3">
+
           I became obsessed with understanding why systems slow down,
           why users disappear halfway through funnels,
           and how invisible patterns shape real-world systems.
+
         </p>
 
       </div>
@@ -145,6 +219,7 @@
   </section>
 
   <!-- SERVICES -->
+
   <section class="services reveal">
 
     <p class="section-label" id="servicesLabel">
@@ -153,195 +228,36 @@
 
     <div class="services-grid">
 
-      <div class="service-item" id="service1">Transport Intelligence</div>
-      <div class="service-item" id="service2">Forecasting Systems</div>
-      <div class="service-item" id="service3">Behavioral Analytics</div>
-      <div class="service-item" id="service4">Urban Mobility</div>
-      <div class="service-item" id="service5">Funnel Analysis</div>
-      <div class="service-item" id="service6">Product Analytics</div>
-
-    </div>
-
-  </section>
-
-  <!-- PROJECTS -->
-  <section class="projects reveal">
-
-    <p class="section-label" id="projectsLabel">
-      SELECTED PROJECTS
-    </p>
-
-    <!-- PROJECT 1 -->
-    <div class="project-block">
-
-      <div class="project-layout">
-
-        <div class="project-heading">
-
-          <h3 id="project1Title">
-            Transport Network Analysis & Optimization System
-          </h3>
-
-        </div>
-
-        <div class="carousel-container">
-
-          <button class="carousel-btn prev">&#8592;</button>
-
-          <div class="carousel-track">
-
-            <img src="assets/images/gtfs/gtfs_dashboard.png" class="carousel-image active">
-
-            <img src="assets/images/gtfs/busy_routes.png" class="carousel-image">
-
-            <img src="assets/images/gtfs/delay_by_mode.png" class="carousel-image">
-
-            <img src="assets/images/gtfs/travel_time_distribution.png" class="carousel-image">
-
-            <img src="assets/images/gtfs/travel_time_vs_demand.png" class="carousel-image">
-
-          </div>
-
-          <button class="carousel-btn next">&#8594;</button>
-
-        </div>
-
+      <div class="service-item" id="service1">
+        Transport Intelligence
       </div>
 
-      <div class="project-content">
-
-        <p id="project1Text1">
-          Processed and analyzed 34M+ GTFS records
-          to identify congestion behavior,
-          route inefficiencies,
-          delay propagation,
-          and operational variability across Berlin transport systems.
-        </p>
-
-        <p id="project1Text2">
-          Built forecasting models and analytics systems
-          to study peak-hour movement patterns
-          and network optimization opportunities.
-        </p>
-
+      <div class="service-item" id="service2">
+        Forecasting Systems
       </div>
 
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project-block">
-
-      <div class="project-layout">
-
-        <div class="project-heading">
-
-          <h3 id="project2Title">
-            Germany Data Job Market Analysis
-          </h3>
-
-        </div>
-
-        <div class="carousel-container">
-
-          <button class="carousel-btn prev">&#8592;</button>
-
-          <div class="carousel-track">
-
-            <img src="assets/images/data_jobs/number_of_jobs_per_company.png" class="carousel-image active">
-
-            <img src="assets/images/data_jobs/number_of_jobs_per_country.png" class="carousel-image">
-
-            <img src="assets/images/data_jobs/trending_top_skills_for_data_analyst_in_de.png" class="carousel-image">
-
-            <img src="assets/images/data_jobs/skills_for_data_analysts_in_de.png" class="carousel-image">
-
-          </div>
-
-          <button class="carousel-btn next">&#8594;</button>
-
-        </div>
-
+      <div class="service-item" id="service3">
+        Behavioral Analytics
       </div>
 
-      <div class="project-content">
-
-        <p id="project2Text1">
-          Analyzed 50K+ job postings across Germany
-          to understand hiring trends,
-          SQL demand,
-          salary patterns,
-          and BI ecosystem shifts.
-        </p>
-
-        <p id="project2Text2">
-          Built preprocessing pipelines,
-          skill-demand analysis,
-          and market segmentation visualizations
-          to understand the evolving analytics landscape.
-        </p>
-
+      <div class="service-item" id="service4">
+        Urban Mobility
       </div>
 
-    </div>
-
-    <!-- PROJECT 3 -->
-    <div class="project-block">
-
-      <div class="project-layout">
-
-        <div class="project-heading">
-
-          <h3 id="project3Title">
-            E-Commerce Sales Performance Analysis
-          </h3>
-
-        </div>
-
-        <div class="carousel-container">
-
-          <button class="carousel-btn prev">&#8592;</button>
-
-          <div class="carousel-track">
-
-            <img src="assets/images/ecommerce/overview_dashboard.png" class="carousel-image active">
-
-            <img src="assets/images/ecommerce/revenue_analysis.png" class="carousel-image">
-
-            <img src="assets/images/ecommerce/product_analysis.png" class="carousel-image">
-
-            <img src="assets/images/ecommerce/geographic_analysis.png" class="carousel-image">
-
-          </div>
-
-          <button class="carousel-btn next">&#8594;</button>
-
-        </div>
-
+      <div class="service-item" id="service5">
+        Funnel Analysis
       </div>
 
-      <div class="project-content">
-
-        <p id="project3Text1">
-          Explored customer behavior,
-          revenue patterns,
-          checkout abandonment,
-          and purchasing trends using 1M+ transactions.
-        </p>
-
-        <p id="project3Text2">
-          Built KPI dashboards,
-          conversion funnel analysis,
-          and segmentation insights
-          to identify revenue optimization opportunities.
-        </p>
-
+      <div class="service-item" id="service6">
+        Product Analytics
       </div>
 
     </div>
 
   </section>
 
-<!-- SKILLS -->
+  <!-- SKILLS -->
+
   <section class="skills reveal">
 
     <p class="section-label" id="skillsLabel">
@@ -349,6 +265,8 @@
     </p>
 
     <div class="skills-grid">
+
+      <!-- SKILL -->
 
       <div class="skill-card">
 
@@ -364,10 +282,15 @@
           <span>NumPy</span>
           <span>Forecasting</span>
           <span>A/B Testing</span>
+          <span>Time Series</span>
+          <span>Segmentation</span>
+          <span>KPI Analysis</span>
 
         </div>
 
       </div>
+
+      <!-- SKILL -->
 
       <div class="skill-card">
 
@@ -379,13 +302,16 @@
 
           <span>Power BI</span>
           <span>Tableau</span>
-          <span>Looker Studio</span>
+          <span>Tableau Public</span>
+          <span>Google Data Studio</span>
           <span>Matplotlib</span>
           <span>Seaborn</span>
 
         </div>
 
       </div>
+
+      <!-- SKILL -->
 
       <div class="skill-card">
 
@@ -405,6 +331,8 @@
 
       </div>
 
+      <!-- SKILL -->
+
       <div class="skill-card">
 
         <p class="skill-title" id="skillTitle4">
@@ -418,6 +346,314 @@
           <span>Google Analytics</span>
           <span>Excel</span>
           <span>Notion</span>
+          <span>VS Code</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- PROJECTS -->
+
+  <section class="projects reveal">
+
+    <p class="section-label" id="projectsLabel">
+      SELECTED PROJECTS
+    </p>
+
+    <!-- PROJECT 1 -->
+
+    <div class="project-block">
+
+      <div class="project-layout">
+
+        <!-- HEADING -->
+
+        <div class="project-heading">
+
+          <h3 id="project1Title">
+
+            Transport Network Analysis &
+            Optimization System
+
+          </h3>
+
+        </div>
+
+        <!-- CAROUSEL -->
+
+        <div class="carousel-container">
+
+          <button class="carousel-btn prev">
+            &#8592;
+          </button>
+
+          <div class="carousel-track">
+
+            <img
+              src="assets/images/gtfs/gtfs_dashboard.png"
+              class="carousel-image active"
+            >
+
+            <img
+              src="assets/images/gtfs/busy_routes.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/gtfs/delay_by_mode.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/gtfs/travel_time_distribution.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/gtfs/travel_time_vs_demand.png"
+              class="carousel-image"
+            >
+
+          </div>
+
+          <button class="carousel-btn next">
+            &#8594;
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CONTENT -->
+
+      <div class="project-content">
+
+        <p id="project1Text1">
+
+          Processed and analyzed 34M+ GTFS records
+          to identify congestion behavior,
+          route inefficiencies,
+          delay propagation,
+          and operational variability across Berlin transport systems.
+
+        </p>
+
+        <p id="project1Text2">
+
+          Built forecasting models and analytics systems
+          to study peak-hour movement patterns
+          and network optimization opportunities.
+
+        </p>
+
+        <!-- LINKS -->
+
+        <div class="project-links">
+
+          <a
+            href="https://github.com/nitinsinghdm/Transport-Network-Analysis-and-Optimization"
+            target="_blank"
+          >
+            View Case Study
+          </a>
+
+          <a
+            href="https://public.tableau.com/app/profile/nitin.singh7854/viz/BerlinPublicTransportNetworkAnalysis/Dashboard"
+            target="_blank"
+          >
+            Live Dashboard
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PROJECT 2 -->
+
+    <div class="project-block">
+
+      <div class="project-layout">
+
+        <div class="project-heading">
+
+          <h3 id="project2Title">
+
+            Germany Data Job Market Analysis
+
+          </h3>
+
+        </div>
+
+        <div class="carousel-container">
+
+          <button class="carousel-btn prev">
+            &#8592;
+          </button>
+
+          <div class="carousel-track">
+
+            <img
+              src="assets/images/data_jobs/number_of_jobs_per_company.png"
+              class="carousel-image active"
+            >
+
+            <img
+              src="assets/images/data_jobs/number_of_jobs_per_country.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/data_jobs/trending_top_skills_for_data_analyst_in_de.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/data_jobs/skills_for_data_analysts_in_de.png"
+              class="carousel-image"
+            >
+
+          </div>
+
+          <button class="carousel-btn next">
+            &#8594;
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="project-content">
+
+        <p id="project2Text1">
+
+          Analyzed 50K+ job postings across Germany
+          to understand hiring trends,
+          SQL demand,
+          salary patterns,
+          and BI ecosystem shifts.
+
+        </p>
+
+        <p id="project2Text2">
+
+          Built preprocessing pipelines,
+          skill-demand analysis,
+          and market segmentation visualizations
+          to understand the evolving analytics landscape.
+
+        </p>
+
+        <div class="project-links">
+
+          <a
+            href="https://github.com/nitinsinghdm/Data-Job-Market-Analysis-Germany"
+            target="_blank"
+          >
+            View Case Study
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PROJECT 3 -->
+
+    <div class="project-block">
+
+      <div class="project-layout">
+
+        <div class="project-heading">
+
+          <h3 id="project3Title">
+
+            E-Commerce Sales
+            Performance Analysis
+
+          </h3>
+
+        </div>
+
+        <div class="carousel-container">
+
+          <button class="carousel-btn prev">
+            &#8592;
+          </button>
+
+          <div class="carousel-track">
+
+            <img
+              src="assets/images/ecommerce/overview_dashboard.png"
+              class="carousel-image active"
+            >
+
+            <img
+              src="assets/images/ecommerce/revenue_analysis.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/ecommerce/product_analysis.png"
+              class="carousel-image"
+            >
+
+            <img
+              src="assets/images/ecommerce/geographic_analysis.png"
+              class="carousel-image"
+            >
+
+          </div>
+
+          <button class="carousel-btn next">
+            &#8594;
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="project-content">
+
+        <p id="project3Text1">
+
+          Explored customer behavior,
+          revenue patterns,
+          checkout abandonment,
+          and purchasing trends using 1M+ transactions.
+
+        </p>
+
+        <p id="project3Text2">
+
+          Built KPI dashboards,
+          conversion funnel analysis,
+          and segmentation insights
+          to identify revenue optimization opportunities.
+
+        </p>
+
+        <div class="project-links">
+
+          <a
+            href="https://github.com/nitinsinghdm/Ecommerce_Sales_Analysis"
+            target="_blank"
+          >
+            View Case Study
+          </a>
+
+          <a
+            href="https://datastudio.google.com/reporting/a4beeccd-1cec-4407-bbb4-cb077565ec9f"
+            target="_blank"
+          >
+            Live Dashboard
+          </a>
 
         </div>
 
@@ -428,28 +664,96 @@
   </section>
 
   <!-- EXPERIENCE -->
+
   <section class="experience reveal">
 
     <p class="section-label" id="experienceLabel">
       EXPERIENCE
     </p>
 
-    <div class="exp-row">
+    <div class="timeline">
 
-      <div>2023</div>
-      <div>WhatYouTech</div>
-      <div id="exp1">
-        Performance Marketing & Analytics Analyst
+      <!-- EXPERIENCE 1 -->
+
+      <div class="timeline-item">
+
+        <div class="timeline-left">
+
+          <p class="timeline-year">
+            2023 — 2024
+          </p>
+
+        </div>
+
+        <div class="timeline-right">
+
+          <h3>
+            WhatYouTech
+          </h3>
+
+          <p class="timeline-role" id="exp1">
+
+            Performance Marketing &
+            Analytics Analyst
+
+          </p>
+
+          <p class="timeline-description" id="exp1desc">
+
+            Worked across campaign analytics,
+            conversion funnels,
+            audience segmentation,
+            and performance optimization.
+
+            Built reporting systems to analyze customer behavior,
+            identify drop-offs,
+            improve ROI,
+            and support data-driven campaign decisions across multiple marketing channels.
+
+          </p>
+
+        </div>
+
       </div>
 
-    </div>
+      <!-- EXPERIENCE 2 -->
 
-    <div class="exp-row">
+      <div class="timeline-item">
 
-      <div>2021</div>
-      <div>ThoughtStart</div>
-      <div id="exp2">
-        Web & Analytics Developer
+        <div class="timeline-left">
+
+          <p class="timeline-year">
+            2021 — 2022
+          </p>
+
+        </div>
+
+        <div class="timeline-right">
+
+          <h3>
+            ThoughtStart
+          </h3>
+
+          <p class="timeline-role" id="exp2">
+
+            Web & Analytics Developer
+
+          </p>
+
+          <p class="timeline-description" id="exp2desc">
+
+            Built and optimized analytics tracking systems
+            for an LMS platform used by thousands of learners.
+
+            Worked closely with product and founder teams
+            to improve engagement,
+            reduce bounce rates,
+            and better understand user learning behavior.
+
+          </p>
+
+        </div>
+
       </div>
 
     </div>
@@ -457,10 +761,13 @@
   </section>
 
   <!-- CONTACT -->
+
   <section class="contact reveal">
 
     <h2 id="contactTitle">
+
       Let’s build something meaningful with data.
+
     </h2>
 
     <div class="contact-links">
@@ -469,11 +776,17 @@
         nitinsingh.web07@gmail.com
       </a>
 
-      <a href="https://linkedin.com/in/nitinsinghdm" target="_blank">
+      <a
+        href="https://linkedin.com/in/nitinsinghdm"
+        target="_blank"
+      >
         LinkedIn
       </a>
 
-      <a href="https://github.com/nitinsinghdm" target="_blank">
+      <a
+        href="https://github.com/nitinsinghdm"
+        target="_blank"
+      >
         GitHub
       </a>
 
