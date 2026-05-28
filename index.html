@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Nitin Singh | Data Analyst</title>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Nitin Singh | Data Analyst
+  </title>
+
+  <!-- FONT -->
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  >
+
+  <!-- CSS -->
 
   <link rel="stylesheet" href="style.css">
 
@@ -18,7 +37,9 @@
 
 <body>
 
-<!-- MOBILE TOPBAR -->
+<!-- =========================
+     MOBILE TOPBAR
+========================= -->
 
 <div class="mobile-topbar">
 
@@ -36,11 +57,17 @@
 
     <div class="mobile-language-switch">
 
-      <button class="lang-btn active" onclick="setLanguage('en')">
+      <button
+        class="lang-btn active"
+        onclick="setLanguage('en')"
+      >
         EN
       </button>
 
-      <button class="lang-btn" onclick="setLanguage('de')">
+      <button
+        class="lang-btn"
+        onclick="setLanguage('de')"
+      >
         DE
       </button>
 
@@ -61,17 +88,26 @@
 
 </div>
 
-<!-- NOISE -->
+<!-- =========================
+     NOISE
+========================= -->
 
 <div class="noise"></div>
 
-<!-- LEFT BAR -->
+<!-- =========================
+     SIDEBAR
+========================= -->
 
 <div class="fixed-bar">
 
+  <!-- LABEL -->
+
   <div class="fixed-top">
 
-    <p class="tiny-label" id="sidebarLabel">
+    <p
+      class="tiny-label"
+      id="sidebarLabel"
+    >
       DATA ANALYST / GERMANY
     </p>
 
@@ -81,11 +117,17 @@
 
   <div class="language-switch">
 
-    <button class="lang-btn active" onclick="setLanguage('en')">
+    <button
+      class="lang-btn active"
+      onclick="setLanguage('en')"
+    >
       EN
     </button>
 
-    <button class="lang-btn" onclick="setLanguage('de')">
+    <button
+      class="lang-btn"
+      onclick="setLanguage('de')"
+    >
       DE
     </button>
 
@@ -95,15 +137,17 @@
 
   <div class="fixed-bottom">
 
-    <a href="mailto:nitinsingh.web07@gmail.com">
-      nitinsingh.web07@gmail.com
-    </a>
-
-    <a href="https://linkedin.com/in/nitinsinghdm" target="_blank">
+    <a
+      href="https://linkedin.com/in/nitinsinghdm"
+      target="_blank"
+    >
       LinkedIn
     </a>
 
-    <a href="https://github.com/nitinsinghdm" target="_blank">
+    <a
+      href="https://github.com/nitinsinghdm"
+      target="_blank"
+    >
       GitHub
     </a>
 
@@ -119,15 +163,22 @@
 
 </div>
 
-<!-- MAIN -->
+<!-- =========================
+     MAIN
+========================= -->
 
 <main>
 
-  <!-- HERO -->
+  <!-- =========================
+       HERO
+  ========================= -->
 
   <section class="hero reveal">
 
-    <p class="hero-small" id="heroSmall">
+    <p
+      class="hero-small"
+      id="heroSmall"
+    >
       Portfolio / 2026
     </p>
 
@@ -164,7 +215,9 @@
 
   </section>
 
-  <!-- ABOUT -->
+  <!-- =========================
+       ABOUT
+  ========================= -->
 
   <section class="about reveal">
 
@@ -189,7 +242,7 @@
 
         <p id="aboutText1">
 
-          A Berlin-based data analyst exploring forecasting,
+          A Germany-based data analyst exploring forecasting,
           behavioral patterns,
           movement,
           and large-scale systems through data.
@@ -218,37 +271,133 @@
 
   </section>
 
-  <!-- SERVICES -->
+
+  <!-- =========================
+       ANALYTICS IMPACT
+  ========================= -->
+
+  <section class="stats reveal">
+
+    <p class="section-label">
+      ANALYTICS IMPACT
+    </p>
+
+    <div class="stats-network">
+
+      <!-- CARD -->
+
+      <div class="stat-card">
+
+        <h3>
+          34M+
+        </h3>
+
+        <p>
+          GTFS Records Processed
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stat-card">
+
+        <h3>
+          50K+
+        </h3>
+
+        <p>
+          Job Listings Analyzed
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stat-card">
+
+        <h3>
+          1M+
+        </h3>
+
+        <p>
+          E-Commerce Transactions
+        </p>
+
+      </div>
+
+      <!-- CARD -->
+
+      <div class="stat-card">
+
+        <h3>
+          15+
+        </h3>
+
+        <p>
+          Dashboards Built
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =========================
+       WHAT I WORK ON
+  ========================= -->
 
   <section class="services reveal">
 
-    <p class="section-label" id="servicesLabel">
+    <p
+      class="section-label"
+      id="servicesLabel"
+    >
       WHAT I WORK ON
     </p>
 
     <div class="services-grid">
 
-      <div class="service-item" id="service1">
+      <div
+        class="service-item"
+        id="service1"
+      >
         Transport Intelligence
       </div>
 
-      <div class="service-item" id="service2">
+      <div
+        class="service-item"
+        id="service2"
+      >
         Forecasting Systems
       </div>
 
-      <div class="service-item" id="service3">
+      <div
+        class="service-item"
+        id="service3"
+      >
         Behavioral Analytics
       </div>
 
-      <div class="service-item" id="service4">
+      <div
+        class="service-item"
+        id="service4"
+      >
         Urban Mobility
       </div>
 
-      <div class="service-item" id="service5">
+      <div
+        class="service-item"
+        id="service5"
+      >
         Funnel Analysis
       </div>
 
-      <div class="service-item" id="service6">
+      <div
+        class="service-item"
+        id="service6"
+      >
         Product Analytics
       </div>
 
@@ -256,22 +405,30 @@
 
   </section>
 
-  <!-- SKILLS -->
+  <!-- =========================
+       SKILLS
+  ========================= -->
 
   <section class="skills reveal">
 
-    <p class="section-label" id="skillsLabel">
+    <p
+      class="section-label"
+      id="skillsLabel"
+    >
       TOOLS & STACK
     </p>
 
     <div class="skills-grid">
 
-      <!-- SKILL -->
+      <!-- CARD -->
 
       <div class="skill-card">
 
-        <p class="skill-title" id="skillTitle1">
-          Analytics
+        <p
+          class="skill-title"
+          id="skillTitle1"
+        >
+          Analytics & BI
         </p>
 
         <div class="skill-items">
@@ -281,41 +438,51 @@
           <span>Pandas</span>
           <span>NumPy</span>
           <span>Forecasting</span>
+          <span>KPI Reporting</span>
           <span>A/B Testing</span>
-          <span>Time Series</span>
           <span>Segmentation</span>
-          <span>KPI Analysis</span>
+          <span>Cohort Analysis</span>
+          <span>Funnel Analytics</span>
+          <span>Statistical Analysis</span>
 
         </div>
 
       </div>
 
-      <!-- SKILL -->
+      <!-- CARD -->
 
       <div class="skill-card">
 
-        <p class="skill-title" id="skillTitle2">
-          Visualization
+        <p
+          class="skill-title"
+          id="skillTitle2"
+        >
+          Visualization & Reporting
         </p>
 
         <div class="skill-items">
 
           <span>Power BI</span>
           <span>Tableau</span>
-          <span>Tableau Public</span>
-          <span>Google Data Studio</span>
+          <span>Looker Studio</span>
+          <span>Excel</span>
           <span>Matplotlib</span>
           <span>Seaborn</span>
+          <span>Dashboard Design</span>
+          <span>Business Reporting</span>
 
         </div>
 
       </div>
 
-      <!-- SKILL -->
+      <!-- CARD -->
 
       <div class="skill-card">
 
-        <p class="skill-title" id="skillTitle3">
+        <p
+          class="skill-title"
+          id="skillTitle3"
+        >
           Data Engineering
         </p>
 
@@ -326,27 +493,35 @@
           <span>BigQuery</span>
           <span>PostgreSQL</span>
           <span>MySQL</span>
+          <span>ETL Pipelines</span>
+          <span>Data Modeling</span>
+          <span>Transformation Workflows</span>
 
         </div>
 
       </div>
 
-      <!-- SKILL -->
+      <!-- CARD -->
 
       <div class="skill-card">
 
-        <p class="skill-title" id="skillTitle4">
-          Workflow
+        <p
+          class="skill-title"
+          id="skillTitle4"
+        >
+          Product & Workflow
         </p>
 
         <div class="skill-items">
 
+          <span>Google Analytics</span>
+          <span>HubSpot</span>
+          <span>Bitrix24</span>
           <span>Git</span>
           <span>Jupyter</span>
-          <span>Google Analytics</span>
-          <span>Excel</span>
-          <span>Notion</span>
           <span>VS Code</span>
+          <span>CRM Analytics</span>
+          <span>Campaign Analytics</span>
 
         </div>
 
@@ -356,25 +531,30 @@
 
   </section>
 
-  <!-- PROJECTS -->
+
+  <!-- =========================
+       PROJECTS
+  ========================= -->
 
   <section class="projects reveal">
 
-    <p class="section-label" id="projectsLabel">
+    <p class="section-label">
       SELECTED PROJECTS
     </p>
 
-    <!-- PROJECT 1 -->
+    <!-- =========================
+         PROJECT 1
+    ========================= -->
 
     <div class="project-block">
 
       <div class="project-layout">
 
-        <!-- HEADING -->
+        <!-- LEFT -->
 
         <div class="project-heading">
 
-          <h3 id="project1Title">
+          <h3>
 
             Transport Network Analysis &
             Optimization System
@@ -383,7 +563,7 @@
 
         </div>
 
-        <!-- CAROUSEL -->
+        <!-- RIGHT -->
 
         <div class="carousel-container">
 
@@ -432,21 +612,27 @@
 
       <div class="project-content">
 
-        <p id="project1Text1">
+        <p class="project-stack">
+
+          Python · SQL · Tableau · Forecasting · NetworkX
+
+        </p>
+
+        <p>
 
           Processed and analyzed 34M+ GTFS records
           to identify congestion behavior,
           route inefficiencies,
           delay propagation,
-          and operational variability across Berlin transport systems.
+          and operational variability across transport systems.
 
         </p>
 
-        <p id="project1Text2">
+        <p>
 
           Built forecasting models and analytics systems
           to study peak-hour movement patterns
-          and network optimization opportunities.
+          and optimization opportunities.
 
         </p>
 
@@ -474,7 +660,9 @@
 
     </div>
 
-    <!-- PROJECT 2 -->
+    <!-- =========================
+         PROJECT 2
+    ========================= -->
 
     <div class="project-block">
 
@@ -482,9 +670,10 @@
 
         <div class="project-heading">
 
-          <h3 id="project2Title">
+          <h3>
 
-            Germany Data Job Market Analysis
+            Data Job Market Analysis –
+            Germany
 
           </h3>
 
@@ -530,22 +719,27 @@
 
       <div class="project-content">
 
-        <p id="project2Text1">
+        <p class="project-stack">
 
-          Analyzed 50K+ job postings across Germany
-          to understand hiring trends,
-          SQL demand,
-          salary patterns,
-          and BI ecosystem shifts.
+          Python · Pandas · NumPy · Matplotlib · SQL
 
         </p>
 
-        <p id="project2Text2">
+        <p>
 
-          Built preprocessing pipelines,
-          skill-demand analysis,
-          and market segmentation visualizations
-          to understand the evolving analytics landscape.
+          Processed 50K+ job postings analyzing demand trends
+          for SQL,
+          Python,
+          BI tools,
+          and salary distribution across Germany.
+
+        </p>
+
+        <p>
+
+          Built automated preprocessing workflows,
+          market segmentation analysis,
+          and demand forecasting insights.
 
         </p>
 
@@ -564,7 +758,9 @@
 
     </div>
 
-    <!-- PROJECT 3 -->
+    <!-- =========================
+         PROJECT 3
+    ========================= -->
 
     <div class="project-block">
 
@@ -572,7 +768,7 @@
 
         <div class="project-heading">
 
-          <h3 id="project3Title">
+          <h3>
 
             E-Commerce Sales
             Performance Analysis
@@ -621,21 +817,27 @@
 
       <div class="project-content">
 
-        <p id="project3Text1">
+        <p class="project-stack">
 
-          Explored customer behavior,
-          revenue patterns,
-          checkout abandonment,
-          and purchasing trends using 1M+ transactions.
+          SQL · BigQuery · Looker Studio · Funnel Analytics
 
         </p>
 
-        <p id="project3Text2">
+        <p>
+
+          Analyzed 1M+ transactions identifying customer behavior,
+          checkout abandonment,
+          revenue drivers,
+          and purchasing trends.
+
+        </p>
+
+        <p>
 
           Built KPI dashboards,
-          conversion funnel analysis,
-          and segmentation insights
-          to identify revenue optimization opportunities.
+          segmentation analysis,
+          and funnel reporting systems
+          supporting revenue optimization opportunities.
 
         </p>
 
@@ -661,19 +863,96 @@
 
     </div>
 
+    <!-- =========================
+         PROJECT 4
+    ========================= -->
+
+    <div class="project-block">
+
+      <div class="project-layout">
+
+        <div class="project-heading">
+
+          <h3>
+
+            Modern Data Pipeline
+            Architecture
+
+          </h3>
+
+        </div>
+
+        <div class="carousel-container">
+
+          <div class="carousel-track">
+
+            <img
+              src="assets/images/dbt/lineage.png"
+              class="carousel-image active"
+            >
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="project-content">
+
+        <p class="project-stack">
+
+          dbt · Databricks · SQL · ETL · Data Modeling
+
+        </p>
+
+        <p>
+
+          Designed modern analytics engineering workflows
+          inspired by scalable medallion architectures.
+
+        </p>
+
+        <p>
+
+          Focused on lineage tracking,
+          modular SQL transformations,
+          testing workflows,
+          and scalable analytics engineering practices.
+
+        </p>
+
+        <!-- LINKS -->
+
+        <div class="project-links">
+
+          <a
+            href="https://github.com/nitinsinghdm/DBT_DataBrick_Pipeline"
+            target="_blank"
+          >
+            View Case Study
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </section>
 
-  <!-- EXPERIENCE -->
+  <!-- =========================
+       EXPERIENCE
+  ========================= -->
 
   <section class="experience reveal">
 
-    <p class="section-label" id="experienceLabel">
+    <p class="section-label">
       EXPERIENCE
     </p>
 
     <div class="timeline">
 
-      <!-- EXPERIENCE 1 -->
+      <!-- EXPERIENCE -->
 
       <div class="timeline-item">
 
@@ -691,24 +970,25 @@
             WhatYouTech
           </h3>
 
-          <p class="timeline-role" id="exp1">
+          <p class="timeline-role">
 
             Performance Marketing &
             Analytics Analyst
 
           </p>
 
-          <p class="timeline-description" id="exp1desc">
+          <p class="timeline-description">
 
-            Worked across campaign analytics,
+            Managed multi-channel campaign analytics,
             conversion funnels,
-            audience segmentation,
-            and performance optimization.
+            segmentation,
+            forecasting,
+            and KPI reporting across high-volume digital campaigns.
 
-            Built reporting systems to analyze customer behavior,
-            identify drop-offs,
+            Built SQL-based reporting systems to identify drop-offs,
             improve ROI,
-            and support data-driven campaign decisions across multiple marketing channels.
+            support budget decisions,
+            and optimize user acquisition performance through experimentation and behavioral analysis.
 
           </p>
 
@@ -716,7 +996,7 @@
 
       </div>
 
-      <!-- EXPERIENCE 2 -->
+      <!-- EXPERIENCE -->
 
       <div class="timeline-item">
 
@@ -734,21 +1014,64 @@
             ThoughtStart
           </h3>
 
-          <p class="timeline-role" id="exp2">
+          <p class="timeline-role">
 
             Web & Analytics Developer
 
           </p>
 
-          <p class="timeline-description" id="exp2desc">
+          <p class="timeline-description">
 
-            Built and optimized analytics tracking systems
-            for an LMS platform used by thousands of learners.
+            Built analytics tracking systems and reporting workflows
+            for an LMS platform serving thousands of learners.
 
-            Worked closely with product and founder teams
-            to improve engagement,
-            reduce bounce rates,
-            and better understand user learning behavior.
+            Improved engagement tracking,
+            reduced bounce rates,
+            optimized website performance,
+            and supported enrollment analysis through dashboard systems and user behavior monitoring.
+
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- EXPERIENCE -->
+
+      <div class="timeline-item">
+
+        <div class="timeline-left">
+
+          <p class="timeline-year">
+            2021
+          </p>
+
+        </div>
+
+        <div class="timeline-right">
+
+          <h3>
+            Ono Teas
+          </h3>
+
+          <p class="timeline-role">
+
+            Analytics & Marketing Intern
+
+          </p>
+
+          <p class="timeline-description">
+
+            Supported analytics,
+            CRM workflows,
+            and campaign performance tracking
+            across social and web campaigns.
+
+            Worked with HubSpot and Bitrix24 to monitor engagement,
+            traffic,
+            conversions,
+            customer response metrics,
+            and optimization opportunities for multiple client campaigns.
 
           </p>
 
@@ -760,43 +1083,78 @@
 
   </section>
 
-  <!-- CONTACT -->
+  <!-- =========================
+       CONTACT
+  ========================= -->
 
   <section class="contact reveal">
 
-    <h2 id="contactTitle">
+    <h2>
 
       Let’s build something meaningful with data.
 
     </h2>
 
-    <div class="contact-links">
+  </section>
 
-      <a href="mailto:nitinsingh.web07@gmail.com">
-        nitinsingh.web07@gmail.com
-      </a>
+  <!-- =========================
+       FOOTER
+  ========================= -->
 
-      <a
-        href="https://linkedin.com/in/nitinsinghdm"
-        target="_blank"
-      >
-        LinkedIn
-      </a>
+  <footer class="footer">
 
-      <a
-        href="https://github.com/nitinsinghdm"
-        target="_blank"
-      >
-        GitHub
-      </a>
+    <div class="footer-line"></div>
+
+    <div class="footer-content">
+
+      <!-- LEFT -->
+
+      <div class="footer-left">
+
+        <p>
+          Nitin Singh
+        </p>
+
+        <span>
+          Data Analyst · Germany
+        </span>
+
+      </div>
+
+      <!-- RIGHT -->
+
+      <div class="footer-right">
+
+        <a href="mailto:nitinsingh.web07@gmail.com">
+          Email
+        </a>
+
+        <a
+          href="https://linkedin.com/in/nitinsinghdm"
+          target="_blank"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/nitinsinghdm"
+          target="_blank"
+        >
+          GitHub
+        </a>
+
+      </div>
 
     </div>
 
-  </section>
+  </footer>
 
 </main>
+
+<!-- JS -->
 
 <script src="script.js"></script>
 
 </body>
+
 </html>

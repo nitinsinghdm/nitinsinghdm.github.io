@@ -2,24 +2,33 @@
    REVEAL ANIMATION
 ========================= */
 
-const reveals = document.querySelectorAll(".reveal");
+const reveals =
+  document.querySelectorAll(".reveal");
 
 function revealSections(){
 
   reveals.forEach((section) => {
 
-    const windowHeight = window.innerHeight;
-    const sectionTop = section.getBoundingClientRect().top;
+    const windowHeight =
+      window.innerHeight;
+
+    const sectionTop =
+      section.getBoundingClientRect().top;
 
     if(sectionTop < windowHeight - 120){
+
       section.classList.add("active");
+
     }
 
   });
 
 }
 
-window.addEventListener("scroll", revealSections);
+window.addEventListener(
+  "scroll",
+  revealSections
+);
 
 revealSections();
 
@@ -27,36 +36,71 @@ revealSections();
    AUTO CAROUSEL
 ========================= */
 
-const carousels = document.querySelectorAll(".carousel-container");
+const carousels =
+  document.querySelectorAll(".carousel-container");
 
 carousels.forEach((carousel) => {
 
-  const images = carousel.querySelectorAll(".carousel-image");
-  const nextBtn = carousel.querySelector(".next");
-  const prevBtn = carousel.querySelector(".prev");
+  const images =
+    carousel.querySelectorAll(".carousel-image");
+
+  const nextBtn =
+    carousel.querySelector(".next");
+
+  const prevBtn =
+    carousel.querySelector(".prev");
+
+  /* SINGLE IMAGE */
+
+  if(images.length <= 1){
+
+    if(nextBtn) nextBtn.style.display = "none";
+
+    if(prevBtn) prevBtn.style.display = "none";
+
+    return;
+  }
 
   let index = 0;
 
   function showImage(i){
 
     images.forEach((img) => {
+
       img.classList.remove("active");
+
     });
 
     images[i].classList.add("active");
 
   }
 
+  /* NEXT */
+
   nextBtn.addEventListener("click", () => {
 
-    index = (index + 1) % images.length;
+    index++;
+
+    if(index >= images.length){
+
+      index = 0;
+    }
+
     showImage(index);
 
   });
 
+  /* PREVIOUS */
+
   prevBtn.addEventListener("click", () => {
 
-    index = (index - 1 + images.length) % images.length;
+    index--;
+
+    if(index < 0){
+
+      index = images.length - 1;
+    }
+
     showImage(index);
 
   });
@@ -65,7 +109,13 @@ carousels.forEach((carousel) => {
 
   setInterval(() => {
 
-    index = (index + 1) % images.length;
+    index++;
+
+    if(index >= images.length){
+
+      index = 0;
+    }
+
     showImage(index);
 
   }, 2000);
@@ -76,31 +126,42 @@ carousels.forEach((carousel) => {
    LANGUAGE SWITCH
 ========================= */
 
-function updateButtons(lang){
-
-  const buttons = document.querySelectorAll(".lang-btn");
-
-  buttons.forEach((btn) => {
-    btn.classList.remove("active");
-  });
-
-  buttons.forEach((btn) => {
-
-    if(btn.innerText.toLowerCase() === lang){
-      btn.classList.add("active");
-    }
-
-  });
-
-}
-
-/* =========================
-   LANGUAGE FUNCTION
-========================= */
-
 function setLanguage(lang){
 
-  updateButtons(lang);
+  const buttons =
+    document.querySelectorAll(".lang-btn");
+
+  buttons.forEach((btn) => {
+
+    btn.classList.remove("active");
+
+  });
+
+  /* ACTIVE BUTTONS */
+
+  if(lang === "en"){
+
+    buttons.forEach((btn) => {
+
+      if(btn.innerText === "EN"){
+
+        btn.classList.add("active");
+      }
+
+    });
+
+  }else{
+
+    buttons.forEach((btn) => {
+
+      if(btn.innerText === "DE"){
+
+        btn.classList.add("active");
+      }
+
+    });
+
+  }
 
   /* =========================
      ENGLISH
@@ -140,7 +201,7 @@ function setLanguage(lang){
       I’m Nitin Singh.`;
 
     document.getElementById("aboutText1").innerHTML =
-      `A Berlin-based data analyst exploring forecasting,
+      `A Germany-based data analyst exploring forecasting,
       behavioral patterns,
       movement,
       and large-scale systems through data.`;
@@ -184,103 +245,221 @@ function setLanguage(lang){
       "TOOLS & STACK";
 
     document.getElementById("skillTitle1").innerHTML =
-      "Analytics";
+      "Analytics & BI";
 
     document.getElementById("skillTitle2").innerHTML =
-      "Visualization";
+      "Visualization & Reporting";
 
     document.getElementById("skillTitle3").innerHTML =
       "Data Engineering";
 
     document.getElementById("skillTitle4").innerHTML =
-      "Workflow";
+      "Product & Workflow";
 
-    /* PROJECTS */
+    /* STATS */
 
-    document.getElementById("projectsLabel").innerHTML =
+    document.querySelector(".stats .section-label").innerHTML =
+      "ANALYTICS IMPACT";
+
+    const statCards =
+      document.querySelectorAll(".stat-card p");
+
+    statCards[0].innerHTML =
+      "GTFS Records Processed";
+
+    statCards[1].innerHTML =
+      "Job Listings Analyzed";
+
+    statCards[2].innerHTML =
+      "E-Commerce Transactions";
+
+    statCards[3].innerHTML =
+      "Dashboards Built";
+
+    /* PROJECT LABEL */
+
+    document.querySelector(".projects .section-label").innerHTML =
       "SELECTED PROJECTS";
 
-    document.getElementById("project1Title").innerHTML =
-      "Transport Network Analysis & Optimization System";
+    /* PROJECT TITLES */
 
-    document.getElementById("project1Text1").innerHTML =
+    const projectTitles =
+      document.querySelectorAll(".project-heading h3");
+
+    projectTitles[0].innerHTML =
+      `Transport Network Analysis &
+      Optimization System`;
+
+    projectTitles[1].innerHTML =
+      `Data Job Market Analysis –
+      Germany`;
+
+    projectTitles[2].innerHTML =
+      `E-Commerce Sales
+      Performance Analysis`;
+
+    projectTitles[3].innerHTML =
+      `Modern Data Pipeline
+      Architecture`;
+
+    /* PROJECT STACKS */
+
+    const projectStacks =
+      document.querySelectorAll(".project-stack");
+
+    projectStacks[0].innerHTML =
+      "Python · SQL · Tableau · Forecasting · NetworkX";
+
+    projectStacks[1].innerHTML =
+      "Python · Pandas · NumPy · Matplotlib · SQL";
+
+    projectStacks[2].innerHTML =
+      "SQL · BigQuery · Looker Studio · Funnel Analytics";
+
+    projectStacks[3].innerHTML =
+      "dbt · Databricks · SQL · ETL · Data Modeling";
+
+    /* PROJECT DESCRIPTIONS */
+
+    const projectParagraphs =
+      document.querySelectorAll(".project-content p:not(.project-stack)");
+
+    /* PROJECT 1 */
+
+    projectParagraphs[0].innerHTML =
       `Processed and analyzed 34M+ GTFS records
       to identify congestion behavior,
       route inefficiencies,
       delay propagation,
-      and operational variability across Berlin transport systems.`;
+      and operational variability across transport systems.`;
 
-    document.getElementById("project1Text2").innerHTML =
+    projectParagraphs[1].innerHTML =
       `Built forecasting models and analytics systems
       to study peak-hour movement patterns
-      and network optimization opportunities.`;
+      and optimization opportunities.`;
 
-    document.getElementById("project2Title").innerHTML =
-      "Germany Data Job Market Analysis";
+    /* PROJECT 2 */
 
-    document.getElementById("project2Text1").innerHTML =
-      `Analyzed 50K+ job postings across Germany
-      to understand hiring trends,
-      SQL demand,
-      salary patterns,
-      and BI ecosystem shifts.`;
+    projectParagraphs[2].innerHTML =
+      `Processed 50K+ job postings analyzing demand trends
+      for SQL,
+      Python,
+      BI tools,
+      and salary distribution across Germany.`;
 
-    document.getElementById("project2Text2").innerHTML =
-      `Built preprocessing pipelines,
-      skill-demand analysis,
-      and market segmentation visualizations
-      to understand the evolving analytics landscape.`;
+    projectParagraphs[3].innerHTML =
+      `Built automated preprocessing workflows,
+      market segmentation analysis,
+      and demand forecasting insights.`;
 
-    document.getElementById("project3Title").innerHTML =
-      "E-Commerce Sales Performance Analysis";
+    /* PROJECT 3 */
 
-    document.getElementById("project3Text1").innerHTML =
-      `Explored customer behavior,
-      revenue patterns,
+    projectParagraphs[4].innerHTML =
+      `Analyzed 1M+ transactions identifying customer behavior,
       checkout abandonment,
-      and purchasing trends using 1M+ transactions.`;
+      revenue drivers,
+      and purchasing trends.`;
 
-    document.getElementById("project3Text2").innerHTML =
+    projectParagraphs[5].innerHTML =
       `Built KPI dashboards,
-      conversion funnel analysis,
-      and segmentation insights
-      to identify revenue optimization opportunities.`;
+      segmentation analysis,
+      and funnel reporting systems
+      supporting revenue optimization opportunities.`;
+
+    /* PROJECT 4 */
+
+    projectParagraphs[6].innerHTML =
+      `Designed modern analytics engineering workflows
+      inspired by scalable medallion architectures.`;
+
+    projectParagraphs[7].innerHTML =
+      `Focused on lineage tracking,
+      modular SQL transformations,
+      testing workflows,
+      and scalable analytics engineering practices.`;
+
+    /* BUTTONS */
+
+    document.querySelectorAll(".project-links a")
+    .forEach((btn) => {
+
+      if(btn.innerHTML.includes("Case Study")){
+
+        btn.innerHTML =
+          "View Case Study";
+      }
+
+      if(btn.innerHTML.includes("Dashboard")){
+
+        btn.innerHTML =
+          "Live Dashboard";
+      }
+
+    });
 
     /* EXPERIENCE */
 
-    document.getElementById("experienceLabel").innerHTML =
+    document.querySelector(".experience .section-label").innerHTML =
       "EXPERIENCE";
 
-    document.getElementById("exp1").innerHTML =
-      "Performance Marketing & Analytics Analyst";
+    const timelineRoles =
+      document.querySelectorAll(".timeline-role");
 
-    document.getElementById("exp2").innerHTML =
+    timelineRoles[0].innerHTML =
+      `Performance Marketing &
+      Analytics Analyst`;
+
+    timelineRoles[1].innerHTML =
       "Web & Analytics Developer";
 
-    document.getElementById("exp1desc").innerHTML =
-      `Worked across campaign analytics,
+    timelineRoles[2].innerHTML =
+      "Analytics & Marketing Intern";
+
+    const timelineDescriptions =
+      document.querySelectorAll(".timeline-description");
+
+    timelineDescriptions[0].innerHTML =
+      `Managed multi-channel campaign analytics,
       conversion funnels,
-      audience segmentation,
-      and performance optimization.
+      segmentation,
+      forecasting,
+      and KPI reporting across high-volume digital campaigns.
 
-      Built reporting systems to analyze customer behavior,
-      identify drop-offs,
+      Built SQL-based reporting systems to identify drop-offs,
       improve ROI,
-      and support data-driven campaign decisions across multiple marketing channels.`;
+      support budget decisions,
+      and optimize user acquisition performance through experimentation and behavioral analysis.`;
 
-    document.getElementById("exp2desc").innerHTML =
-      `Built and optimized analytics tracking systems
-      for an LMS platform used by thousands of learners.
+    timelineDescriptions[1].innerHTML =
+      `Built analytics tracking systems and reporting workflows
+      for an LMS platform serving thousands of learners.
 
-      Worked closely with product and founder teams
-      to improve engagement,
-      reduce bounce rates,
-      and better understand user learning behavior.`;
+      Improved engagement tracking,
+      reduced bounce rates,
+      optimized website performance,
+      and supported enrollment analysis through dashboard systems and user behavior monitoring.`;
+
+    timelineDescriptions[2].innerHTML =
+      `Supported analytics,
+      CRM workflows,
+      and campaign performance tracking
+      across social and web campaigns.
+
+      Worked with HubSpot and Bitrix24 to monitor engagement,
+      traffic,
+      conversions,
+      customer response metrics,
+      and optimization opportunities for multiple client campaigns.`;
 
     /* CONTACT */
 
-    document.getElementById("contactTitle").innerHTML =
+    document.querySelector(".contact h2").innerHTML =
       "Let’s build something meaningful with data.";
+
+    /* FOOTER */
+
+    document.querySelector(".footer-left span").innerHTML =
+      "Data Analyst · Germany";
 
   }
 
@@ -322,7 +501,8 @@ function setLanguage(lang){
       Ich bin Nitin Singh.`;
 
     document.getElementById("aboutText1").innerHTML =
-      `Ein Data Analyst aus Deutschland mit Fokus auf Prognosen,
+      `Ein Data Analyst aus Deutschland
+      mit Fokus auf Prognosen,
       Verhaltensmuster,
       Bewegung,
       und große Datensysteme.`;
@@ -367,107 +547,235 @@ function setLanguage(lang){
       "TOOLS & TECH STACK";
 
     document.getElementById("skillTitle1").innerHTML =
-      "Analyse";
+      "Analyse & BI";
 
     document.getElementById("skillTitle2").innerHTML =
-      "Visualisierung";
+      "Visualisierung & Reporting";
 
     document.getElementById("skillTitle3").innerHTML =
       "Datenengineering";
 
     document.getElementById("skillTitle4").innerHTML =
-      "Workflow";
+      "Produkt & Workflow";
 
-    /* PROJECTS */
+    /* STATS */
 
-    document.getElementById("projectsLabel").innerHTML =
+    document.querySelector(".stats .section-label").innerHTML =
+      "ANALYTICS EINFLUSS";
+
+    const statCards =
+      document.querySelectorAll(".stat-card p");
+
+    statCards[0].innerHTML =
+      "GTFS Datensätze verarbeitet";
+
+    statCards[1].innerHTML =
+      "Jobanzeigen analysiert";
+
+    statCards[2].innerHTML =
+      "E-Commerce Transaktionen";
+
+    statCards[3].innerHTML =
+      "Dashboards erstellt";
+
+    /* PROJECT LABEL */
+
+    document.querySelector(".projects .section-label").innerHTML =
       "AUSGEWÄHLTE PROJEKTE";
 
-    document.getElementById("project1Title").innerHTML =
-      "Transportnetz Analyse & Optimierungssystem";
+    /* PROJECT TITLES */
 
-    document.getElementById("project1Text1").innerHTML =
+    const projectTitles =
+      document.querySelectorAll(".project-heading h3");
+
+    projectTitles[0].innerHTML =
+      `Transportnetz Analyse &
+      Optimierungssystem`;
+
+    projectTitles[1].innerHTML =
+      `Analyse des Deutschen
+      Datenjobmarkts`;
+
+    projectTitles[2].innerHTML =
+      `E-Commerce
+      Verkaufsanalyse`;
+
+    projectTitles[3].innerHTML =
+      `Moderne Datenpipeline
+      Architektur`;
+
+    /* STACKS */
+
+    const projectStacks =
+      document.querySelectorAll(".project-stack");
+
+    projectStacks[0].innerHTML =
+      "Python · SQL · Tableau · Prognosen · NetworkX";
+
+    projectStacks[1].innerHTML =
+      "Python · Pandas · NumPy · Matplotlib · SQL";
+
+    projectStacks[2].innerHTML =
+      "SQL · BigQuery · Looker Studio · Funnel Analyse";
+
+    projectStacks[3].innerHTML =
+      "dbt · Databricks · SQL · ETL · Datenmodellierung";
+
+    /* PROJECT DESCRIPTIONS */
+
+    const projectParagraphs =
+      document.querySelectorAll(".project-content p:not(.project-stack)");
+
+    /* PROJECT 1 */
+
+    projectParagraphs[0].innerHTML =
       `Analyse von über 34 Millionen GTFS-Datensätzen
       zur Untersuchung von Verkehrsverhalten,
       Verspätungen,
       Engpässen
-      und Netzwerkeffizienz im Verkehrssystem.`;
+      und Netzwerkeffizienz.`;
 
-    document.getElementById("project1Text2").innerHTML =
+    projectParagraphs[1].innerHTML =
       `Entwicklung von Prognosemodellen
       und Analysesystemen
       zur Untersuchung von Stoßzeiten
       und Optimierungsmöglichkeiten.`;
 
-    document.getElementById("project2Title").innerHTML =
-      "Analyse des Deutschen Datenjobmarkts";
+    /* PROJECT 2 */
 
-    document.getElementById("project2Text1").innerHTML =
+    projectParagraphs[2].innerHTML =
       `Analyse von über 50.000 Stellenanzeigen
       zur Untersuchung von SQL-Nachfrage,
-      Gehaltsmustern,
-      und Hiring-Trends in Deutschland.`;
+      Python,
+      BI-Tools
+      und Gehaltsentwicklungen in Deutschland.`;
 
-    document.getElementById("project2Text2").innerHTML =
-      `Entwicklung von Datenpipelines,
-      Skill-Analysen,
-      und Marktsegmentierungsvisualisierungen
-      zur Untersuchung des Analytics-Marktes.`;
+    projectParagraphs[3].innerHTML =
+      `Entwicklung automatisierter Datenpipelines,
+      Marktsegmentierung
+      und Prognoseanalysen.`;
 
-    document.getElementById("project3Title").innerHTML =
-      "E-Commerce Verkaufsanalyse";
+    /* PROJECT 3 */
 
-    document.getElementById("project3Text1").innerHTML =
-      `Analyse von Kundenverhalten,
-      Umsatzmustern,
-      Kaufabbrüchen
-      und Einkaufstrends anhand von über 1 Million Transaktionen.`;
+    projectParagraphs[4].innerHTML =
+      `Analyse von über 1 Million Transaktionen
+      zur Untersuchung von Kundenverhalten,
+      Kaufabbrüchen,
+      Umsatztreibern
+      und Einkaufsmustern.`;
 
-    document.getElementById("project3Text2").innerHTML =
-      `Erstellung von KPI-Dashboards,
-      Funnel-Analysen
-      und Segmentierungsmodellen
+    projectParagraphs[5].innerHTML =
+      `Entwicklung von KPI-Dashboards,
+      Segmentierungsanalysen
+      und Funnel-Reporting-Systemen
       zur Umsatzoptimierung.`;
+
+    /* PROJECT 4 */
+
+    projectParagraphs[6].innerHTML =
+      `Entwicklung moderner Analytics-Engineering Workflows
+      basierend auf skalierbaren Medallion-Architekturen.`;
+
+    projectParagraphs[7].innerHTML =
+      `Fokus auf Lineage Tracking,
+      modulare SQL-Transformationen,
+      Testing Workflows
+      und skalierbare Datenmodellierung.`;
+
+    /* BUTTONS */
+
+    document.querySelectorAll(".project-links a")
+    .forEach((btn) => {
+
+      if(btn.innerHTML.includes("View Case Study")){
+
+        btn.innerHTML =
+          "Case Study";
+      }
+
+      if(btn.innerHTML.includes("Live Dashboard")){
+
+        btn.innerHTML =
+          "Dashboard";
+      }
+
+    });
 
     /* EXPERIENCE */
 
-    document.getElementById("experienceLabel").innerHTML =
+    document.querySelector(".experience .section-label").innerHTML =
       "ERFAHRUNG";
 
-    document.getElementById("exp1").innerHTML =
-      "Performance Marketing & Analytics Analyst";
+    const timelineRoles =
+      document.querySelectorAll(".timeline-role");
 
-    document.getElementById("exp2").innerHTML =
+    timelineRoles[0].innerHTML =
+      `Performance Marketing &
+      Analytics Analyst`;
+
+    timelineRoles[1].innerHTML =
       "Web & Analytics Entwickler";
 
-    document.getElementById("exp1desc").innerHTML =
-      `Arbeit an Kampagnenanalysen,
-      Conversion Funnels,
-      Zielgruppensegmentierung
-      und Performanceoptimierung.
+    timelineRoles[2].innerHTML =
+      "Analytics & Marketing Praktikant";
 
-      Entwicklung von Reportingsystemen
-      zur Analyse von Nutzerverhalten,
-      ROI-Verbesserung
-      und datenbasierten Entscheidungen.`;
+    const timelineDescriptions =
+      document.querySelectorAll(".timeline-description");
 
-    document.getElementById("exp2desc").innerHTML =
-      `Entwicklung und Optimierung von Analytics-Tracking-Systemen
+    timelineDescriptions[0].innerHTML =
+      `Analyse von Marketingkampagnen,
+      Funnel-Systemen,
+      Segmentierung,
+      Forecasting
+      und KPI-Reporting für digitale Kampagnen.
+
+      Entwicklung SQL-basierter Reporting-Systeme
+      zur Verbesserung von ROI,
+      Nutzergewinnung
+      und Performanceoptimierung.`;
+
+    timelineDescriptions[1].innerHTML =
+      `Entwicklung von Analytics Tracking-Systemen
+      und Reporting-Workflows
       für eine LMS-Plattform mit tausenden Nutzern.
 
-      Zusammenarbeit mit Produkt- und Gründerteams
-      zur Verbesserung von Engagement
-      und Nutzerverhalten.`;
+      Verbesserung von Engagement,
+      Website-Performance,
+      Bounce Rate
+      und Nutzeranalyse.`;
+
+    timelineDescriptions[2].innerHTML =
+      `Unterstützung von Analytics,
+      CRM-Workflows
+      und Kampagnen-Tracking
+      für Social- und Webkampagnen.
+
+      Arbeit mit HubSpot und Bitrix24
+      zur Analyse von Engagement,
+      Traffic,
+      Conversions
+      und Kampagnenperformance.`;
 
     /* CONTACT */
 
-    document.getElementById("contactTitle").innerHTML =
+    document.querySelector(".contact h2").innerHTML =
       "Lass uns etwas Sinnvolles mit Daten entwickeln.";
+
+    /* FOOTER */
+
+    document.querySelector(".footer-left span").innerHTML =
+      "Data Analyst · Deutschland";
 
   }
 
 }
 
-/* DEFAULT */
+/* =========================
+   INITIAL LOAD
+========================= */
 
-setLanguage("en");
+window.addEventListener("load", () => {
+
+  revealSections();
+
+});
