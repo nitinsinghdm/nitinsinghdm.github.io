@@ -729,3 +729,33 @@ LARGE SCREENS
     font-size:6rem;
   }
 }
+/* Responsive hero: preserve the editorial layout without text collisions. */
+.hero-layout {
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, .85fr);
+  gap: clamp(32px, 4vw, 80px);
+}
+.hero-text {
+  min-width: 0;
+  container-type: inline-size;
+}
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 7rem);
+  line-height: 1.06;
+  letter-spacing: -.055em;
+}
+@supports (font-size: 1cqw) {
+  .hero h1 { font-size: clamp(2rem, 12cqw, 7rem); }
+}
+.hero-meta {
+  margin-top: 36px;
+}
+.hero-meta p {
+  line-height: 1.65;
+  max-width: 42rem;
+}
+.hero-image { min-width: 0; }
+@media (max-width: 900px) {
+  .hero-layout { grid-template-columns: minmax(0, 1fr); gap: 34px; }
+  .hero h1 { font-size: clamp(2rem, 7vw, 3rem); }
+  .hero-meta { margin-top: 28px; }
+}
