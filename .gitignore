@@ -1,1 +1,14 @@
 .DS_Store
+
+# Local editor and operating-system files
+Thumbs.db
+*.swp
+*.swo
+
+# Local environment settings
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
