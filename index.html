@@ -17,86 +17,32 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=20260930-hero2">
+  <link rel="stylesheet" href="style.css?v=dark-20260930">
 </head>
 <body>
-<!-- =========================
-MOBILE TOPBAR
-========================= -->
-<div class="mobile-topbar">
-  <div class="mobile-left">
-  <p>
-  Nitin Singh
-  </p>
-  </div>
-  <div class="mobile-right">
-    <div class="mobile-language-switch">
-      <button
-        class="lang-btn active"
-        onclick="setLanguage('en')">
-        EN
-      </button>
-      <button
-        class="lang-btn"
-        onclick="setLanguage('de')">
-        DE
-      </button>
-    </div>
-    <a
-      href="assets/nitin_singh_da_cv.pdf"
-      target="_blank" rel="noopener noreferrer"
-      class="mobile-resume"
-      id="mobileResumeText">
-      Resume
-    </a>
-  </div>
-</div>
-<!-- =========================
-NOISE
-========================= -->
-<div class="noise"></div>
-<!-- =========================
-SIDEBAR
-========================= -->
-<div class="fixed-bar">
-  <div class="fixed-top">
-    <p
-      class="tiny-label"
-      id="sidebarLabel">
-      MARKETING DATA ANALYST / GERMANY
-    </p>
-  </div>
-  <div class="language-switch">
-    <button
-      class="lang-btn active"
-      onclick="setLanguage('en')">
-      EN
-    </button>
-    <button
-      class="lang-btn"
-      onclick="setLanguage('de')">
-      DE
-    </button>
-  </div>
-</div>
-<!-- =========================
-MAIN
-========================= -->
-<main>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header">
+  <a class="wordmark" href="#home" aria-label="Nitin Singh home">ns<span>.</span></a>
+  <nav aria-label="Main navigation"><a href="#projects">Work</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#contact">Contact ↗</a></nav>
+  <div class="header-actions"><div class="language-switch" aria-label="Language"><button class="lang-btn active" onclick="setLanguage('en')">EN</button><button class="lang-btn" onclick="setLanguage('de')">DE</button></div><a class="resume-link" id="mobileResumeText" href="assets/nitin_singh_da_cv.pdf" target="_blank" rel="noopener noreferrer">Resume ↗</a></div>
+</header>
+<main id="main">
 <!-- =========================
 HERO
 ========================= -->
-<section class="hero reveal">
+<section class="hero reveal" id="home">
 <p
 class="hero-small"
 id="heroSmall">
-Portfolio / 2026
+<span class="status-dot" aria-hidden="true"></span> OPEN TO OPPORTUNITIES · BERLIN
 </p>
 <div class="hero-layout">
 <div class="hero-text">
+<p class="eyebrow" id="sidebarLabel">MARKETING DATA ANALYST / GERMANY</p>
 <h1 id="heroTitle">
 Understanding<br>
-customers,<br>
+<span class="accent">customers,</span><br>
 behavior,<br>
 and invisible<br>
 patterns.
@@ -106,18 +52,275 @@ patterns.
 Marketing Data Analyst · Campaign, Customer & Performance Analytics
 </p>
 </div>
+<div class="hero-actions"><a class="button primary" href="#projects">Explore my work <span aria-hidden="true">↗</span></a><a class="text-link" href="mailto:nitinsingh.web07@gmail.com">Let’s talk <span aria-hidden="true">↗</span></a></div>
+<div class="hero-tools"><span>SQL</span><span>Python</span><span>GA4</span><span>Power BI</span></div>
 </div>
 <div class="hero-image">
+<div class="portrait-top"><span>NITIN SINGH</span><span>01 / PROFILE</span></div>
 <img
 src="assets/profile/profile_dp4.png"
-alt="Nitin Singh">
+alt="Nitin Singh" fetchpriority="high">
+<div class="portrait-caption"><span>Marketing × Data × Technology</span><span class="accent" aria-hidden="true">↗</span></div>
 </div>
 </div>
 </section>
+<section class="projects reveal" id="projects">
+<p class="section-label">
+SELECTED WORK / 2026
+</p><div class="section-intro"><h2>From questions<br>to <span class="accent">insights.</span></h2><p>Customer behavior, business performance, and the systems that make analysis possible.</p></div>
+<div class="project-filters" role="group" aria-label="Filter projects"><button class="filter-btn active" data-filter="all" aria-pressed="true">All work <span>06</span></button><button class="filter-btn" data-filter="analytics" aria-pressed="false">Analytics</button><button class="filter-btn" data-filter="automation" aria-pressed="false">Automation</button><button class="filter-btn" data-filter="engineering" aria-pressed="false">Data engineering</button></div>
+<p class="sr-only" id="filterStatus" aria-live="polite">6 projects shown</p>
+
+<!-- ECOMMERCE -->
+<article class="project-block" data-category="analytics"><div class="project-index"><span>01 / CUSTOMER & COMMERCE</span><span aria-hidden="true">↗</span></div>
+<div class="project-layout">
+<div class="project-heading">
+<h3>
+E-Commerce Sales
+Performance Analysis
+</h3>
+</div>
+<div class="carousel-container">
+<div class="carousel-track">
+<img
+src="assets/images/ecommerce/overview_dashboard.png"
+class="carousel-image active" alt="overview dashboard" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+<div class="project-content">
+<p class="project-stack">
+SQL · BigQuery · Looker Studio
+</p>
+<p>
+Analyzed 1M+ transactions to identify customer behavior, revenue drivers and conversion trends. Funnel analysis identified approximately 30% checkout drop-off and key conversion opportunities.
+</p>
+<p>
+Developed KPI dashboards tracking revenue, average order value, conversion and customer performance.
+</p>
+<div class="project-links">
+<a
+href="https://github.com/nitinsinghdm/Ecommerce_Sales_Analysis"
+target="_blank" rel="noopener noreferrer">
+View Case Study
+</a>
+<a
+href="https://datastudio.google.com/reporting/a4beeccd-1cec-4407-bbb4-cb077565ec9f"
+target="_blank" rel="noopener noreferrer">
+Live Dashboard
+</a>
+</div>
+</div>
+</article>
+<!-- AI JOB SEARCH -->
+<article class="project-block" data-category="automation"><div class="project-index"><span>02 / APIs & AUTOMATION</span><span aria-hidden="true">↗</span></div>
+<div class="project-layout">
+<div class="project-heading">
+<h3>
+AI Job Search
+Command Center
+</h3>
+</div>
+<div class="carousel-container">
+    <button class="carousel-btn prev" type="button" aria-label="Previous project image">
+      &#8592;
+    </button>
+    <div class="carousel-track">
+      <img
+        src="assets/images/n8n/dashboard.png"
+        class="carousel-image active" alt="dashboard" loading="lazy" decoding="async">
+      <img
+        src="assets/images/n8n/architecture-diagram.png"
+        class="carousel-image" alt="architecture diagram" loading="lazy" decoding="async">
+      <img
+        src="assets/images/n8n/job-discovery-agent.png"
+        class="carousel-image" alt="job discovery agent" loading="lazy" decoding="async">
+      <img
+        src="assets/images/n8n/application-agent.png"
+        class="carousel-image" alt="application agent" loading="lazy" decoding="async">
+      <img
+        src="assets/images/n8n/interview-agent.png"
+        class="carousel-image" alt="interview agent" loading="lazy" decoding="async">
+      <img
+        src="assets/images/n8n/calendar-agent.png"
+        class="carousel-image" alt="calendar agent" loading="lazy" decoding="async">
+      <img
+        src="assets/images/n8n/gmail-agent.png"
+        class="carousel-image" alt="gmail agent" loading="lazy" decoding="async">
+      <img
+        src="assets/images/n8n/chat-interface.png"
+        class="carousel-image" alt="chat interface" loading="lazy" decoding="async">
+      <img
+        src="assets/images/n8n/logs.png"
+        class="carousel-image" alt="logs" loading="lazy" decoding="async">
+    </div>
+    <button class="carousel-btn next" type="button" aria-label="Next project image">
+      &#8594;
+    </button>
+</div>
+</div>
+<div class="project-content">
+<p class="project-stack">
+n8n · OpenAI API · Gmail API · Google Sheets · Calendar API
+</p>
+<p>
+Built an AI-powered workflow automating job discovery, application tracking, recruiter follow-ups, and interview scheduling.
+</p>
+<p>
+Connected Gmail, Google Sheets, OpenAI, and Calendar workflows to create a centralized job search system.
+</p>
+<div class="project-links">
+<a
+href="https://github.com/nitinsinghdm/AI-Job-Search-Command-Center"
+target="_blank" rel="noopener noreferrer">
+View Case Study
+</a>
+</div>
+</div>
+</article>
+<!-- AML -->
+<article class="project-block" data-category="engineering"><div class="project-index"><span>03 / DATA QUALITY & RISK</span><span aria-hidden="true">↗</span></div>
+  <div class="project-layout">
+    <div class="project-heading"><h3>Enterprise AML Compliance Platform</h3></div><div class="pipeline-panel" aria-label="Project workflow: Python generation, staging, SQL validation, core database"><span class="pipeline-label">DATA WORKFLOW</span><div class="pipeline-step"><span>01</span> Python generation <small>Customers · Accounts · Beneficiaries</small></div><div class="pipeline-step"><span>02</span> Staging & validation <small>Duplicates · Foreign keys · Business rules</small></div><div class="pipeline-step"><span>03</span> PostgreSQL core <small>Structured data for AML analytics</small></div></div>
+  </div>
+  <div class="project-content">
+    <p class="project-stack">PostgreSQL · Python · SQL · ETL · Data Modeling</p>
+    <p>Designed a PostgreSQL banking database for customers, accounts, transactions and AML analytics. Built Python pipelines generating 10K customers, 12K accounts and 18K beneficiaries with risk attributes.</p>
+    <p>Developed staging-to-core ETL workflows with SQL validation for duplicates, foreign keys and business rules.</p>
+    <div class="project-links"><a href="https://github.com/nitinsinghdm/Enterprise-AML-Compliance-Platform" target="_blank" rel="noopener noreferrer">View Case Study</a></div>
+  </div>
+</article>
+
+<!-- TRANSPORT -->
+<article class="project-block" data-category="analytics"><div class="project-index"><span>04 / NETWORK & OPERATIONS</span><span aria-hidden="true">↗</span></div>
+<div class="project-layout">
+<div class="project-heading">
+<h3>
+Transport Network Analysis &
+Optimization System
+</h3>
+</div>
+<div class="carousel-container">
+<button class="carousel-btn prev" type="button" aria-label="Previous project image">
+&#8592;
+</button>
+<div class="carousel-track">
+<img src="assets/images/gtfs/gtfs_dashboard.png"
+class="carousel-image active" alt="gtfs dashboard" loading="lazy" decoding="async">
+<img src="assets/images/gtfs/busy_routes.png"
+class="carousel-image" alt="busy routes" loading="lazy" decoding="async">
+<img src="assets/images/gtfs/delay_by_mode.png"
+class="carousel-image" alt="delay by mode" loading="lazy" decoding="async">
+<img src="assets/images/gtfs/travel_time_distribution.png"
+class="carousel-image" alt="travel time distribution" loading="lazy" decoding="async">
+</div>
+<button class="carousel-btn next" type="button" aria-label="Next project image">
+&#8594;
+</button>
+</div>
+</div>
+<div class="project-content">
+<p class="project-stack">
+Python · SQL · Tableau · Forecasting · NetworkX
+</p>
+<p>
+Processed and analyzed 34M+ GTFS records to identify congestion patterns and transport inefficiencies.
+</p>
+<p>
+Built forecasting models and optimization workflows supporting operational analytics.
+</p>
+<div class="project-links">
+<a
+href="https://github.com/nitinsinghdm/Transport-Network-Analysis-and-Optimization"
+target="_blank" rel="noopener noreferrer">
+View Case Study
+</a>
+<a
+href="https://public.tableau.com/app/profile/nitin.singh7854/viz/BerlinPublicTransportNetworkAnalysis/Dashboard"
+target="_blank" rel="noopener noreferrer">
+Live Dashboard
+</a>
+</div>
+</div>
+</article>
+<!-- DATA JOBS -->
+<article class="project-block" data-category="analytics"><div class="project-index"><span>05 / MARKET INTELLIGENCE</span><span aria-hidden="true">↗</span></div>
+<div class="project-layout">
+<div class="project-heading">
+<h3>
+Data Job Market Analysis -
+Germany
+</h3>
+</div>
+<div class="carousel-container">
+<div class="carousel-track">
+<img
+src="assets/images/data_jobs/skills_for_data_analysts_in_de.png"
+class="carousel-image active" alt="skills for data analysts in de" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+<div class="project-content">
+<p class="project-stack">
+Python · Pandas · NumPy · Matplotlib
+</p>
+<p>
+Processed 50K+ job postings analyzing skill demand, salaries and market trends.
+</p>
+<p>
+Built automated preprocessing workflows to reduce manual analysis effort by approximately 40%. Identified high-demand skill clusters and salary trends to support market intelligence insights.
+</p>
+<div class="project-links">
+<a
+href="https://github.com/nitinsinghdm/Python_Data_Project"
+target="_blank" rel="noopener noreferrer">
+View Case Study
+</a>
+</div>
+</div>
+</article>
+<!-- DBT -->
+<article class="project-block" data-category="engineering"><div class="project-index"><span>06 / ANALYTICS ENGINEERING</span><span aria-hidden="true">↗</span></div>
+<div class="project-layout">
+<div class="project-heading">
+<h3>
+Modern Data Pipeline
+Architecture
+</h3>
+</div>
+<div class="carousel-container">
+<div class="carousel-track">
+<img
+src="assets/images/dbt/lineage.png"
+class="carousel-image active dbt-lineage" alt="lineage" loading="lazy" decoding="async">
+</div>
+</div>
+</div>
+<div class="project-content">
+<p class="project-stack">
+dbt · Databricks · SQL · ETL · Data Modeling
+</p>
+<p>
+Designed scalable analytics engineering workflows inspired by modern medallion architectures.
+</p>
+<p>
+Focused on lineage tracking and modular transformations.
+</p>
+<div class="project-links">
+<a
+href="https://github.com/nitinsinghdm/DBT_DataBrick_Pipeline"
+target="_blank" rel="noopener noreferrer">
+View Case Study
+</a>
+</div>
+</div>
+</article>
+</section>
+
 <!-- =========================
 ABOUT
 ========================= -->
-<section class="about reveal">
+<section class="about reveal" id="about"><p class="section-label">THE PERSON BEHIND THE ANALYSIS</p>
 <div class="about-grid">
 <div class="about-left">
 <h2 id="aboutTitle">
@@ -316,256 +519,8 @@ Marketing Tools & Automation
 <!-- =========================
 PROJECTS
 ========================= -->
-<section class="projects reveal">
-<p class="section-label">
-SELECTED PROJECTS
-</p>
-<!-- ECOMMERCE -->
-<div class="project-block">
-<div class="project-layout">
-<div class="project-heading">
-<h3>
-E-Commerce Sales
-Performance Analysis
-</h3>
-</div>
-<div class="carousel-container">
-<div class="carousel-track">
-<img
-src="assets/images/ecommerce/overview_dashboard.png"
-class="carousel-image active" alt="overview dashboard">
-</div>
-</div>
-</div>
-<div class="project-content">
-<p class="project-stack">
-SQL · BigQuery · Looker Studio
-</p>
-<p>
-Analyzed 1M+ transactions to identify customer behavior, revenue drivers and conversion trends. Funnel analysis identified approximately 30% checkout drop-off and key conversion opportunities.
-</p>
-<p>
-Developed KPI dashboards tracking revenue, average order value, conversion and customer performance.
-</p>
-<div class="project-links">
-<a
-href="https://github.com/nitinsinghdm/Ecommerce_Sales_Analysis"
-target="_blank" rel="noopener noreferrer">
-View Case Study
-</a>
-<a
-href="https://datastudio.google.com/reporting/a4beeccd-1cec-4407-bbb4-cb077565ec9f"
-target="_blank" rel="noopener noreferrer">
-Live Dashboard
-</a>
-</div>
-</div>
-</div>
-<!-- AI JOB SEARCH -->
-<div class="project-block">
-<div class="project-layout">
-<div class="project-heading">
-<h3>
-AI Job Search
-Command Center
-</h3>
-</div>
-<div class="carousel-container">
-    <button class="carousel-btn prev" type="button" aria-label="Previous project image">
-      &#8592;
-    </button>
-    <div class="carousel-track">
-      <img
-        src="assets/images/n8n/dashboard.png"
-        class="carousel-image active" alt="dashboard">
-      <img
-        src="assets/images/n8n/architecture-diagram.png"
-        class="carousel-image" alt="architecture diagram">
-      <img
-        src="assets/images/n8n/job-discovery-agent.png"
-        class="carousel-image" alt="job discovery agent">
-      <img
-        src="assets/images/n8n/application-agent.png"
-        class="carousel-image" alt="application agent">
-      <img
-        src="assets/images/n8n/interview-agent.png"
-        class="carousel-image" alt="interview agent">
-      <img
-        src="assets/images/n8n/calendar-agent.png"
-        class="carousel-image" alt="calendar agent">
-      <img
-        src="assets/images/n8n/gmail-agent.png"
-        class="carousel-image" alt="gmail agent">
-      <img
-        src="assets/images/n8n/chat-interface.png"
-        class="carousel-image" alt="chat interface">
-      <img
-        src="assets/images/n8n/logs.png"
-        class="carousel-image" alt="logs">
-    </div>
-    <button class="carousel-btn next" type="button" aria-label="Next project image">
-      &#8594;
-    </button>
-</div>
-</div>
-<div class="project-content">
-<p class="project-stack">
-n8n · OpenAI API · Gmail API · Google Sheets · Calendar API
-</p>
-<p>
-Built an AI-powered workflow automating job discovery, application tracking, recruiter follow-ups, and interview scheduling.
-</p>
-<p>
-Connected Gmail, Google Sheets, OpenAI, and Calendar workflows to create a centralized job search system.
-</p>
-<div class="project-links">
-<a
-href="https://github.com/nitinsinghdm/AI-Job-Search-Command-Center"
-target="_blank" rel="noopener noreferrer">
-View Case Study
-</a>
-</div>
-</div>
-</div>
-<!-- AML -->
-<div class="project-block">
-  <div class="project-layout">
-    <div class="project-heading"><h3>Enterprise AML Compliance Platform</h3></div>
-  </div>
-  <div class="project-content">
-    <p class="project-stack">PostgreSQL · Python · SQL · ETL · Data Modeling</p>
-    <p>Designed a PostgreSQL banking database for customers, accounts, transactions and AML analytics. Built Python pipelines generating 10K customers, 12K accounts and 18K beneficiaries with risk attributes.</p>
-    <p>Developed staging-to-core ETL workflows with SQL validation for duplicates, foreign keys and business rules.</p>
-    <div class="project-links"><a href="https://github.com/nitinsinghdm/Enterprise-AML-Compliance-Platform" target="_blank" rel="noopener noreferrer">View Case Study</a></div>
-  </div>
-</div>
-
-<!-- TRANSPORT -->
-<div class="project-block">
-<div class="project-layout">
-<div class="project-heading">
-<h3>
-Transport Network Analysis &
-Optimization System
-</h3>
-</div>
-<div class="carousel-container">
-<button class="carousel-btn prev" type="button" aria-label="Previous project image">
-&#8592;
-</button>
-<div class="carousel-track">
-<img src="assets/images/gtfs/gtfs_dashboard.png"
-class="carousel-image active" alt="gtfs dashboard">
-<img src="assets/images/gtfs/busy_routes.png"
-class="carousel-image" alt="busy routes">
-<img src="assets/images/gtfs/delay_by_mode.png"
-class="carousel-image" alt="delay by mode">
-<img src="assets/images/gtfs/travel_time_distribution.png"
-class="carousel-image" alt="travel time distribution">
-</div>
-<button class="carousel-btn next" type="button" aria-label="Next project image">
-&#8594;
-</button>
-</div>
-</div>
-<div class="project-content">
-<p class="project-stack">
-Python · SQL · Tableau · Forecasting · NetworkX
-</p>
-<p>
-Processed and analyzed 34M+ GTFS records to identify congestion patterns and transport inefficiencies.
-</p>
-<p>
-Built forecasting models and optimization workflows supporting operational analytics.
-</p>
-<div class="project-links">
-<a
-href="https://github.com/nitinsinghdm/Transport-Network-Analysis-and-Optimization"
-target="_blank" rel="noopener noreferrer">
-View Case Study
-</a>
-<a
-href="https://public.tableau.com/app/profile/nitin.singh7854/viz/BerlinPublicTransportNetworkAnalysis/Dashboard"
-target="_blank" rel="noopener noreferrer">
-Live Dashboard
-</a>
-</div>
-</div>
-</div>
-<!-- DATA JOBS -->
-<div class="project-block">
-<div class="project-layout">
-<div class="project-heading">
-<h3>
-Data Job Market Analysis -
-Germany
-</h3>
-</div>
-<div class="carousel-container">
-<div class="carousel-track">
-<img
-src="assets/images/data_jobs/skills_for_data_analysts_in_de.png"
-class="carousel-image active" alt="skills for data analysts in de">
-</div>
-</div>
-</div>
-<div class="project-content">
-<p class="project-stack">
-Python · Pandas · NumPy · Matplotlib
-</p>
-<p>
-Processed 50K+ job postings analyzing skill demand, salaries and market trends.
-</p>
-<p>
-Built automated preprocessing workflows to reduce manual analysis effort by approximately 40%. Identified high-demand skill clusters and salary trends to support market intelligence insights.
-</p>
-<div class="project-links">
-<a
-href="https://github.com/nitinsinghdm/Python_Data_Project"
-target="_blank" rel="noopener noreferrer">
-View Case Study
-</a>
-</div>
-</div>
-</div>
-<!-- DBT -->
-<div class="project-block">
-<div class="project-layout">
-<div class="project-heading">
-<h3>
-Modern Data Pipeline
-Architecture
-</h3>
-</div>
-<div class="carousel-container">
-<div class="carousel-track">
-<img
-src="assets/images/dbt/lineage.png"
-class="carousel-image active dbt-lineage" alt="lineage">
-</div>
-</div>
-</div>
-<div class="project-content">
-<p class="project-stack">
-dbt · Databricks · SQL · ETL · Data Modeling
-</p>
-<p>
-Designed scalable analytics engineering workflows inspired by modern medallion architectures.
-</p>
-<p>
-Focused on lineage tracking and modular transformations.
-</p>
-<div class="project-links">
-<a
-href="https://github.com/nitinsinghdm/DBT_DataBrick_Pipeline"
-target="_blank" rel="noopener noreferrer">
-View Case Study
-</a>
-</div>
-</div>
-</div>
 <!-- EXPERIENCE -->
-<section class="experience reveal">
+<section class="experience reveal" id="experience">
 <p
 class="section-label"
 id="experienceLabel">
@@ -700,7 +655,7 @@ Hindi · Native
 <!-- =========================
 CONTACT
 ========================= -->
-<section class="contact reveal">
+<section class="contact reveal" id="contact"><p class="section-label">HAVE A QUESTION WORTH EXPLORING?</p>
 <h2 id="contactTitle">
 Let’s turn marketing data into better decisions.
 </h2>
@@ -725,7 +680,7 @@ Resume
 </a>
 </div>
 </section>
-</section><!-- End selected-projects wrapper from supplied layout -->
+
 </main>
 <!-- =========================
 FOOTER
@@ -763,6 +718,6 @@ FOOTER
 <!-- =========================
 JS
 ========================= -->
-<script src="script.js"></script>
+<script src="script.js?v=dark-20260930"></script>
 </body>
 </html>
