@@ -44,7 +44,7 @@ Project dataset sizes are separate from professional campaign outcomes.
 
 - Charcoal theme with lime accents and responsive layouts.
 - Project filters for analytics, automation, and data engineering.
-- Manual screenshot carousels with image captions and position indicators.
+- Manual carousels combine numbered project workflows and original screenshots, with position indicators, keyboard controls, and touch swiping. Navigation arrows use CSS strokes so they cannot render as mobile emoji.
 - Sticky navigation, scroll progress, and subtle section reveals.
 - Keyboard focus styles, a skip link, and reduced-motion support.
 - Profile and experience copy can switch between English and German. Navigation, project descriptions, and some other sections currently remain English.

@@ -8,27 +8,37 @@ if ('IntersectionObserver' in window && !reduceMotion) {
   }), { threshold: 0, rootMargin: '0px 0px -30px 0px' });
   reveals.forEach(element => revealObserver.observe(element));
 }
-// Manual carousels: no automatic movement while reading or using a keyboard.
+// Mixed content carousels: workflow panels and original screenshots share one track.
 document.querySelectorAll('.carousel-container').forEach(carousel => {
-  const images = [...carousel.querySelectorAll('.carousel-image')];
-  const next = carousel.querySelector('.next');
-  const prev = carousel.querySelector('.prev');
-  if (images.length < 2) { if (next) next.hidden = true; if (prev) prev.hidden = true; return; }
+  const slides = [...carousel.querySelectorAll('.carousel-slide')];
   let index = 0;
-  const counter = document.createElement('div');
-  counter.className = 'carousel-caption';
-  const caption = document.createElement('span');
-  const count = document.createElement('span');
-  count.className = 'carousel-counter'; count.setAttribute('aria-live', 'polite');
-  counter.append(caption, count); carousel.append(counter);
-  function show(value) {
-    index = (value + images.length) % images.length;
-    images.forEach((image, position) => { image.classList.toggle('active', position === index); image.setAttribute('aria-hidden', String(position !== index)); });
-    caption.textContent = images[index].alt;
-    count.textContent = `${index + 1} / ${images.length}`;
+  const count = document.createElement('p');
+  count.className = 'slide-count'; count.setAttribute('aria-live', 'polite');
+  carousel.append(count);
+  function show(n) {
+    index = (n + slides.length) % slides.length;
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+      slide.hidden = i !== index;
+      slide.setAttribute('aria-hidden', String(i !== index));
+    });
+    count.textContent = `${index + 1} / ${slides.length}`;
   }
-  next?.addEventListener('click', () => show(index + 1));
-  prev?.addEventListener('click', () => show(index - 1));
+  carousel.querySelector('.next')?.addEventListener('click', () => show(index + 1));
+  carousel.querySelector('.prev')?.addEventListener('click', () => show(index - 1));
+  carousel.tabIndex = 0;
+  carousel.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+      e.preventDefault(); show(index + (e.key === 'ArrowRight' ? 1 : -1));
+    }
+  });
+  let startX = 0, startY = 0;
+  carousel.addEventListener('touchstart', e => { startX = e.changedTouches[0].clientX; startY = e.changedTouches[0].clientY; }, {passive:true});
+  carousel.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX, dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) show(index + (dx < 0 ? 1 : -1));
+  }, {passive:true});
+  carousel.querySelectorAll('.carousel-btn').forEach(button => { button.hidden = slides.length < 2; });
   show(0);
 });
 const filters = [...document.querySelectorAll('.filter-btn')];
