@@ -78,6 +78,7 @@ const englishCopy = Object.fromEntries(Object.keys(germanCopy).map(id => [id, do
 function setLanguage(lang) {
   if (lang !== 'en' && lang !== 'de') return;
   document.documentElement.lang = lang;
+  updateThemeButton();
   const copy = lang === 'de' ? germanCopy : englishCopy;
   Object.entries(copy).forEach(([id, value]) => { const element = document.getElementById(id); if (element) element.innerHTML = value; });
   document.querySelectorAll('.lang-btn').forEach(button => {
@@ -87,3 +88,21 @@ function setLanguage(lang) {
   });
 }
 setLanguage('en');
+
+function updateThemeButton() {
+  const button = document.getElementById('themeToggle');
+  const light = document.documentElement.dataset.theme === 'light';
+  const german = document.documentElement.lang === 'de';
+  button.textContent = german ? (light ? 'Dunkel' : 'Hell') : (light ? 'Dark mode' : 'Light mode');
+  button.setAttribute('aria-label', german ? (light ? 'Dunkles Design aktivieren' : 'Helles Design aktivieren') : (light ? 'Switch to dark mode' : 'Switch to light mode'));
+  button.setAttribute('aria-pressed', String(light));
+}
+document.getElementById('themeToggle').addEventListener('click', () => {
+  const theme = document.documentElement.dataset.theme === 'light' ? 'dark' : 'light';
+  document.documentElement.dataset.theme = theme;
+  document.querySelector('meta[name="theme-color"]').content = theme === 'light' ? '#f7f8f3' : '#101211';
+  try { localStorage.setItem('portfolio-theme', theme); } catch (_) {}
+  updateThemeButton();
+});
+updateThemeButton();
+document.querySelector('meta[name="theme-color"]').content = document.documentElement.dataset.theme === 'light' ? '#f7f8f3' : '#101211';

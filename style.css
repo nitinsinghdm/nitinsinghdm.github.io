@@ -51,3 +51,14 @@
   .carousel-track .pipeline-panel { padding:16px 40px; }
   .carousel-track .pipeline-step { padding:12px 0; }
 }
+
+/* Light palette retains the same layout, typography and green identity. */
+:root[data-theme="light"] { color-scheme:light; --bg:#f7f8f3; --panel:#ffffff; --panel-2:#e9eddf; --text:#192117; --muted:#52604f; --line:#d1d9c8; --accent:#426b12; }
+.theme-toggle { padding:7px 11px; border:1px solid var(--line); border-radius:24px; background:var(--panel); font-size:11px; white-space:nowrap; }
+.theme-toggle:hover { border-color:var(--accent); color:var(--accent); }
+:root[data-theme="light"] .site-header { background:rgba(247,248,243,.95); }
+:root[data-theme="light"] .primary,:root[data-theme="light"] .filter-btn.active { background:var(--accent); color:#fff; }
+:root[data-theme="light"] .primary:hover { background:#34550e; }
+:root[data-theme="light"] .carousel-btn { background:#fffffff2; color:var(--accent); border-color:var(--line); }
+:root[data-theme="light"] .carousel-btn:hover { background:var(--panel-2); }
+@media(max-width:640px) { .header-actions { gap:8px; } .theme-toggle { font-size:10px; padding:6px 8px; } }
