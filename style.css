@@ -41,15 +41,15 @@
 
 .about-right .about-closing { font-weight:700; color:var(--text); margin-top:32px; padding-top:24px; border-top:1px solid var(--line); line-height:1.9; letter-spacing:.01em; }
 
-/* Stable frame for every slide: workflow panels and screenshots share its height. */
-.carousel-track { position:relative; display:block; aspect-ratio:4 / 3; height:auto; background:var(--panel); }
-.carousel-track .carousel-slide { position:absolute; inset:0; box-sizing:border-box; width:100%; height:100%; min-height:0; max-height:none; }
-.carousel-track .carousel-image { object-fit:contain; background:var(--panel); }
-.carousel-track .pipeline-panel { overflow:auto; border-radius:10px; }
-@media (max-width:640px) {
-  .carousel-track { aspect-ratio:1 / 1; }
-  .carousel-track .pipeline-panel { padding:16px 40px; }
-  .carousel-track .pipeline-step { padding:12px 0; }
+/* The original workflow panel defines a stable frame for every slide. */
+.carousel-track { position:relative; display:block; aspect-ratio:auto; height:auto; background:var(--panel); }
+.carousel-track .pipeline-panel { position:relative; inset:auto; width:100%; height:auto; min-height:300px; padding:28px 52px; overflow:visible; }
+/* Keep the hidden panel in layout so screenshots cannot resize the frame. */
+.carousel-track .pipeline-panel[hidden] { display:block !important; visibility:hidden; pointer-events:none; }
+.carousel-track .carousel-image { position:absolute; inset:0; width:100%; height:100%; min-height:0; max-height:none; padding:20px 44px; object-fit:contain; background:var(--panel); }
+@media(max-width:600px) {
+  .carousel-track .pipeline-panel { padding:22px 42px; }
+  .carousel-track .carousel-image { padding:18px 38px; }
 }
 
 /* Light palette retains the same layout, typography and green identity. */
