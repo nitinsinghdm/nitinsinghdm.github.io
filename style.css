@@ -38,3 +38,5 @@
 /* Let each original screenshot define its frame: no white letterboxing or cropping. */
 .carousel-track { background:var(--panel); align-items:start; }
 .hero-image img { opacity:1; mix-blend-mode:normal; }
+
+.about-right .about-closing { font-weight:700; color:var(--text); margin-top:32px; padding-top:24px; border-top:1px solid var(--line); line-height:1.9; letter-spacing:.01em; }
