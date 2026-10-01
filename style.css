@@ -62,3 +62,7 @@
 :root[data-theme="light"] .carousel-btn { background:#fffffff2; color:var(--accent); border-color:var(--line); }
 :root[data-theme="light"] .carousel-btn:hover { background:var(--panel-2); }
 @media(max-width:640px) { .header-actions { gap:8px; } .theme-toggle { font-size:10px; padding:6px 8px; } }
+
+/* Sun/moon control uses stroke icons, never emoji glyphs. */
+.theme-toggle { display:inline-flex; align-items:center; justify-content:center; flex-shrink:0; width:36px; height:36px; padding:0; border-radius:50%; }
+.theme-toggle svg { display:block; pointer-events:none; }

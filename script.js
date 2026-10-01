@@ -93,8 +93,11 @@ function updateThemeButton() {
   const button = document.getElementById('themeToggle');
   const light = document.documentElement.dataset.theme === 'light';
   const german = document.documentElement.lang === 'de';
-  button.textContent = german ? (light ? 'Dunkel' : 'Hell') : (light ? 'Dark mode' : 'Light mode');
+  button.innerHTML = light
+    ? '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5 8.5 8.5 0 1 0 20.5 13.1Z"/></svg>'
+    : '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg>';
   button.setAttribute('aria-label', german ? (light ? 'Dunkles Design aktivieren' : 'Helles Design aktivieren') : (light ? 'Switch to dark mode' : 'Switch to light mode'));
+  button.title = button.getAttribute('aria-label');
   button.setAttribute('aria-pressed', String(light));
 }
 document.getElementById('themeToggle').addEventListener('click', () => {
