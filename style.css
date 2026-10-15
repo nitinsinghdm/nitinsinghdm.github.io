@@ -232,3 +232,39 @@ body{isolation:isolate}.scroll-symbol{z-index:1;width:76px;height:76px;border:0;
 /* Keep the rotated portrait clear of the following opaque section. */
 .background-grid{margin-top:32px}
 @media(max-width:760px){.about-grid{row-gap:58px}.background-grid{margin-top:28px}}
+
+/* Phone layout: straight imagery, regular spacing, dedicated snake gutter. */
+@media(max-width:760px){
+ .wrap{padding-left:20px;padding-right:42px}
+ .hero{padding-top:30px;padding-bottom:60px;gap:28px}
+ .hero-title{font-size:clamp(38px,10vw,58px);line-height:1.06;overflow-wrap:normal}
+ .hero-description{font-size:16px;line-height:1.7}
+ .hero-card-wrap{padding:0;max-width:100%}
+ .personal-card,.personal-card:hover,.about-portrait,.about-portrait:hover,.project-stack>.project-card>.project-image,.project-stack>.project-card>.project-image:hover{transform:none!important;translate:none!important;rotate:none!important}
+ .personal-body{padding:22px}.personal-body>h2{font-size:36px}
+ .personal-card .memo-bottom{flex-wrap:wrap;gap:10px}
+ .capabilities{padding-block:28px;gap:24px}
+ .work-section,.about-section{padding-top:42px;padding-bottom:42px}
+ .section-heading{gap:14px;margin-bottom:24px}.section-heading h2{font-size:34px;line-height:1.12}
+ .project-stack>.project-card:nth-of-type(n){padding:18px;gap:20px;margin-bottom:24px}
+ .project-info h3{font-size:28px;margin:12px 0}.project-info>p{font-size:15px;line-height:1.7}
+ .project-stack>.project-card>.project-image{min-height:230px;padding:48px 16px 20px;border-radius:14px}
+ .concept-cover .aml-blueprint>strong{font-size:30px}.blueprint-layers{gap:7px}
+ .more-work{margin-top:24px;padding-top:24px;gap:20px}
+ .marketing-lens{padding-block:36px}.marketing-lens h2{font-size:32px;margin-bottom:24px}.marketing-questions{gap:24px}
+ .about-grid{gap:28px}.about-portrait{width:100%;max-width:360px;margin:0;justify-self:start}
+ .about-portrait img{height:auto;aspect-ratio:3/4;max-height:480px;object-fit:cover}
+ .about-portrait>div{padding:14px;flex-wrap:wrap;gap:6px}
+ .about-copy h3{font-size:26px}.about-copy>p{font-size:16px;line-height:1.75}
+ .about-section .playful-intro{font-size:34px!important}.playful-intro .intro-meet{font-size:16px;line-height:1.6}
+ .skills-block{margin-top:22px}.skills-block>div{padding-block:14px}.skills-block p{font-size:14px;line-height:1.8}
+ .background-grid{margin-top:0;padding-top:36px}.background-title{font-size:28px}
+ .career-column .timeline-item{padding-block:22px}.background-grid .detail-list li{font-size:15px;line-height:1.75}
+ .education-column{grid-template-columns:1fr;margin-top:32px;gap:16px}.education-column .timeline-item,.education-column .language-panel{padding:20px}
+ .case-heading{padding-block:28px}.case-heading h1{font-size:36px;line-height:1.12}.case-layout{gap:28px;padding-top:24px}
+ .gallery-slide>a{height:220px}.gallery-controls button{min-width:44px;min-height:44px}
+ .case-section{gap:12px;margin-bottom:28px}
+ .contact-section{padding:26px 20px;margin:0 42px 28px 20px}.contact-section h2{font-size:32px;line-height:1.15}.contact-email{font-size:clamp(16px,4.4vw,23px);overflow-wrap:anywhere}
+ .contact-links{flex-wrap:wrap;gap:20px}.site-footer{padding:22px 42px 24px 20px;gap:14px;align-items:flex-start}
+ .site-footer>span:nth-child(2){display:block;font-size:12px;line-height:1.6}
+}

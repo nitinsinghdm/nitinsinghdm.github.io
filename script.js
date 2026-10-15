@@ -101,6 +101,11 @@
       const ends=[...new Set(sections.map(e=>Math.round(e.getBoundingClientRect().bottom+scrollY)))].sort((a,b)=>a-b).filter(y=>y>header+100);
       const footer=document.querySelector('.site-footer');
       const bottom=footer?footer.getBoundingClientRect().bottom+scrollY:document.documentElement.scrollHeight;
+      if(innerWidth<=760){
+        route.setAttribute('d',`M ${right} ${header+14} L ${right} ${bottom-18}`);
+        total=route.getTotalLength();legs=[{y0:header+14,y1:bottom-18,start:0,end:total}];
+        updateTarget();schedule();return;
+      }
       if(!ends.length||ends.at(-1)<bottom-30)ends.push(bottom-18);
       let x=left,y=header+14,d=`M ${x} ${y}`;legs=[];total=0;
       ends.forEach((end,i)=>{
@@ -116,6 +121,7 @@
       const reader=scrollY+innerHeight*.36;
       const leg=legs.find(l=>reader<=l.y1)||legs.at(-1);
       if(!leg)return;
+      if(innerWidth<=760){target=clamp(reader-leg.y0,0,total);if(scrollY<2)target=0;return;}
       const vertical=Math.max(1,leg.y1-leg.y0),travel=leg.end-leg.start;
       const approach=Math.min(200,vertical*.4),turnStart=leg.y1-approach;
       const verticalTravel=Math.max(0,travel-(innerWidth-56));
@@ -140,7 +146,7 @@
         const wave=Math.sin(t*9-position/70)*5*Math.sin(t*Math.PI);
         let x=p.x-Math.sin(a)*wave,y=p.y+Math.cos(a)*wave;
         if(s<0)y+=s;if(s>total)y+=s-total;
-        x=x*(1-coil)+(h.x+Math.sin(t*Math.PI*4.5)*t*28)*coil;
+        x=x*(1-coil)+(h.x+Math.sin(t*Math.PI*4.5)*t*(innerWidth<=760?8:28))*coil;
         y=y*(1-coil)+(h.y+Math.cos(t*Math.PI*4.5)*t*28)*coil;
         pts.push([x,y-scrollY]);
       }
