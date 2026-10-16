@@ -268,3 +268,8 @@ body{isolation:isolate}.scroll-symbol{z-index:1;width:76px;height:76px;border:0;
  .contact-links{flex-wrap:wrap;gap:20px}.site-footer{padding:22px 42px 24px 20px;gap:14px;align-items:flex-start}
  .site-footer>span:nth-child(2){display:block;font-size:12px;line-height:1.6}
 }
+
+/* Mobile stack lets tall cards finish scrolling before they pin. */
+@media(max-width:760px) and (prefers-reduced-motion:no-preference){
+ .project-stack>.project-card:nth-of-type(n){position:sticky;top:var(--mobile-stack-top,80px);z-index:var(--mobile-stack-layer,1);margin-bottom:28px;transform:none}
+}

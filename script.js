@@ -193,3 +193,22 @@
     }, {passive:true});
   });
 })();
+
+// Measure card height so mobile stacking never hides the final links or copy.
+(() => {
+  const cards=[...document.querySelectorAll('.project-stack>.project-card')];
+  if(!cards.length)return;
+  function sizeStack(){
+    const viewport=document.documentElement.clientHeight;
+    cards.forEach((card,i)=>{
+      const top=Math.min(80+i*6,viewport-card.offsetHeight-24);
+      card.style.setProperty('--mobile-stack-top',`${top}px`);
+      card.style.setProperty('--mobile-stack-layer',String(i+1));
+    });
+  }
+  const observer=new ResizeObserver(sizeStack);
+  cards.forEach(card=>observer.observe(card));
+  addEventListener('resize',sizeStack);
+  document.fonts.ready.then(sizeStack);
+  sizeStack();
+})();
