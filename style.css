@@ -376,3 +376,15 @@ body{isolation:isolate}.scroll-symbol{z-index:1;width:76px;height:76px;border:0;
 @media(max-width:760px){.about-section>.section-heading{margin-bottom:65px}}
 .heading-aside svg{left:-95px}
 @media(max-width:760px){.heading-aside svg{left:-76px}.contact-section>.heading-aside svg{left:-77px}}
+
+/* A small manga aside gives each case study its own personality. */
+.case-heading-comic{display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:65px;align-items:center;padding-right:8px}
+.case-heading-copy{min-width:0}.case-heading-comic h1{font-size:clamp(38px,4.4vw,64px)}
+.case-comic{position:relative;margin:28px 0 0;padding:0 8px;isolation:isolate}
+.case-comic::before{content:"";position:absolute;inset:8px -3px 90px 16px;border-radius:45%;background:radial-gradient(var(--accent) 1px,transparent 1.5px) 0 0/6px 6px;transform:rotate(8deg);z-index:-1}
+.case-comic-bubble{position:relative;padding:32px 24px 34px;border:3px solid var(--manga-ink);border-radius:46% 44% 47% 42% / 39% 45% 40% 48%;background:var(--manga-paper);color:var(--manga-ink);box-shadow:4px 5px 0 var(--accent);font:400 29px/1.13 var(--manga-font);text-transform:uppercase;text-align:center;transform:rotate(3deg)}
+.case-comic-bubble::after{content:"";position:absolute;bottom:-12px;left:25%;width:22px;height:24px;background:var(--manga-paper);border-left:3px solid var(--manga-ink);border-bottom:3px solid var(--manga-ink);transform:skewY(-30deg)}
+.case-comic-note{position:relative;margin:40px 0 30px 35px;max-width:185px;font:400 23px/1.12 var(--manga-font);color:var(--accent);text-transform:uppercase;transform:rotate(-6deg)}
+.case-comic-note svg{position:absolute;width:75px;height:75px;top:12px;left:-65px;pointer-events:none}
+@media(max-width:1000px){.case-heading-comic{gap:32px;grid-template-columns:minmax(0,1fr) 220px}.case-comic-bubble{font-size:26px;padding:28px 22px}.case-comic-note{font-size:21px;margin-left:30px}}
+@media(max-width:760px){.case-heading-comic{grid-template-columns:1fr;gap:18px;padding-right:0}.case-heading-comic h1{font-size:36px;padding-right:0}.case-comic{justify-self:end;width:235px;max-width:calc(100% - 16px);margin:10px 0 0;padding:0 8px}.case-comic-bubble{font-size:25px;padding:27px 23px 30px;transform:rotate(2deg)}.case-comic-note{font-size:21px;margin:35px 0 30px 30px}.case-comic-note svg{width:65px;height:65px;left:-55px;top:8px}}
