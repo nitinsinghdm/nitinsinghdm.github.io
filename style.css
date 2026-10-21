@@ -305,3 +305,44 @@ body{isolation:isolate}.scroll-symbol{z-index:1;width:76px;height:76px;border:0;
 .portrait-speech strong{display:block;font-family:"Comic Sans MS","Chalkboard SE",cursive;font-size:21px;line-height:1.25;padding:0 10px}
 .portrait-speech p{color:#243b2b;font-size:14px;line-height:1.5;margin:10px 0 0}.speech-spark{position:absolute;left:12px;top:10px;font-size:22px}
 @media(max-width:760px){.snake-speech{width:min(350px,calc(100vw - 40px));padding:26px 23px 24px;bottom:26px}.snake-speech p{font-size:15px}.snake-shout{font-size:19px}.about-portrait>.portrait-speech{margin:0 4px 26px;padding:21px 18px}.portrait-speech strong{font-size:19px}.portrait-speech p{font-size:13px}.career-column .skill-chips{gap:7px}.career-column .skill-chips li{max-width:100%;white-space:normal;font-size:12px}}
+
+/* Manga lettering and connected dialogue, inspired by the supplied references. */
+@font-face{font-family:"Portfolio Manga";src:url("assets/fonts/PatrickHand-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+:root{--manga-ink:#18211a;--manga-paper:#fffef5;--manga-font:"Portfolio Manga","Chalkboard SE",cursive}
+.about-section>.section-heading{margin-bottom:72px}
+.about-section>.section-heading>div{width:100%}
+.about-section .manga-intro{position:relative;isolation:isolate;display:flex;flex-direction:column;align-items:flex-start;max-width:620px;margin:30px 0 0;padding:0 10px 18px;font-family:var(--manga-font);font-size:30px;font-weight:400;line-height:1.1;letter-spacing:.015em;text-transform:uppercase}
+.manga-intro::before{content:"";position:absolute;inset:20px 12% 0 16%;background:radial-gradient(var(--accent) 1px,transparent 1.5px) 0 0/7px 7px;opacity:.35;z-index:-1;transform:rotate(-5deg);border-radius:40%}
+.manga-panel{position:relative;display:block;background:var(--manga-paper);color:var(--manga-ink);border:3px solid var(--manga-ink);box-shadow:3px 4px 0 var(--accent);text-align:center}
+.manga-hello{padding:14px 30px;border-radius:49% 43% 46% 38% / 44% 49% 40% 50%;margin-left:12%;z-index:3;transform:rotate(-3deg)}
+.manga-dream{max-width:420px;padding:19px 34px;margin-top:-3px;border-radius:43% 50% 37% 46% / 40% 45% 48% 43%;z-index:2;transform:rotate(1deg)}
+.manga-name{min-width:280px;padding:20px 35px 24px;margin-top:-4px;margin-left:24%;border-radius:47% 38% 45% 44% / 38% 43% 39% 47%;z-index:1;transform:rotate(-2deg)}
+.manga-name::after{content:"";position:absolute;bottom:-16px;right:24%;width:22px;height:25px;background:var(--manga-paper);border-right:3px solid var(--manga-ink);border-bottom:3px solid var(--manga-ink);transform:skewY(35deg)}
+.manga-name strong{font-size:42px;font-weight:400;display:block}.manga-name>span{font-size:21px;display:block;margin-top:4px}
+.about-portrait{overflow:visible;background:var(--surface)}
+.about-portrait img{border-radius:var(--radius) var(--radius) 0 0;display:block}
+.about-portrait>.portrait-speech{position:absolute;left:-20px;top:-34px;width:290px;max-width:calc(100% + 10px);margin:0;padding:20px 25px 22px;transform:rotate(5deg);border:3px solid var(--manga-ink);background:var(--manga-paper);color:var(--manga-ink);border-radius:48% 45% 42% 44% / 40% 48% 44% 46%;box-shadow:4px 5px 0 var(--accent);z-index:4}
+.portrait-speech::after{left:65%;bottom:-14px;background:var(--manga-paper);border-color:var(--manga-ink);transform:rotate(30deg) skew(15deg)}
+.portrait-speech .speech-spark{display:none}
+.portrait-speech strong{font-family:var(--manga-font);font-weight:400;font-size:26px;line-height:1.05;text-transform:uppercase;letter-spacing:.015em;padding:0}
+.portrait-speech p{font-family:var(--manga-font);font-size:17px;line-height:1.2;text-transform:uppercase;color:var(--manga-ink);margin-top:8px}
+.snake-speech{right:30px;bottom:38px;width:min(340px,calc(100vw - 48px));padding:48px 35px 36px;background:var(--manga-paper);color:var(--manga-ink);border:3px solid var(--manga-ink);border-radius:48% 45% 44% 47% / 31% 40% 39% 42%;box-shadow:6px 7px 0 var(--accent);text-align:center;font-family:var(--manga-font);text-transform:uppercase}
+.snake-speech::before{content:"";position:absolute;inset:-15px;z-index:-2;border-radius:46%;background:radial-gradient(var(--manga-ink) 1px,transparent 1.4px) 0 0/5px 5px;mask-image:radial-gradient(ellipse,transparent 62%,#000 64%);pointer-events:none}
+.snake-speech::after{right:30px;bottom:8px;width:25px;height:32px;background:var(--manga-paper);border-color:var(--manga-ink);transform:rotate(-14deg) skewY(35deg);z-index:-1}
+.snake-shout{font-family:var(--manga-font);font-size:32px;font-weight:400;line-height:1.05;letter-spacing:.025em;padding:0}
+.snake-speech p{font-family:var(--manga-font);color:var(--manga-ink);font-size:23px;line-height:1.2;margin:18px 0}
+.snake-no-hands{font-family:var(--manga-font);font-size:1.2em;font-weight:900;white-space:nowrap}
+.snake-speech-link{font-family:var(--manga-font);font-size:20px;font-weight:400;color:var(--manga-ink)}
+.snake-speech-close{right:34px;top:7px;font-family:var(--manga-font);font-size:30px}
+.site-footer>.snake-invite{position:relative;flex-basis:auto;width:fit-content;max-width:100%;padding:13px 24px;margin:4px 0 14px;background:var(--manga-paper);color:var(--manga-ink);border:2px solid var(--manga-ink);border-radius:45% 42% 40% 38% / 35% 42% 44% 40%;box-shadow:3px 3px 0 var(--accent);font-family:var(--manga-font);font-size:19px;line-height:1.2;text-transform:uppercase}
+.site-footer>.snake-invite::after{content:"";position:absolute;bottom:-9px;left:28px;width:12px;height:14px;transform:skewY(-30deg);background:var(--manga-paper);border-left:2px solid var(--manga-ink);border-bottom:2px solid var(--manga-ink)}
+@media(max-width:760px){
+.about-section .manga-intro{font-size:25px;padding:0 4px 18px;margin-top:24px;max-width:420px}
+.manga-hello{padding:13px 24px;margin-left:8%}.manga-dream{padding:19px 25px;max-width:94%}.manga-name{min-width:0;width:85%;margin-left:13%;padding:18px 22px 22px}.manga-name strong{font-size:36px}.manga-name>span{font-size:19px}
+.about-section>.section-heading{margin-bottom:74px}
+.about-portrait>.portrait-speech{left:-9px;top:-35px;width:245px;max-width:95%;padding:18px 22px;transform:rotate(-3deg)}
+.portrait-speech strong{font-size:24px}.portrait-speech p{font-size:16px}
+.snake-speech{right:24px;bottom:30px;padding:43px 30px 32px}.snake-shout{font-size:29px}.snake-speech p{font-size:22px}.snake-speech-link{font-size:19px}
+.site-footer>.snake-invite{font-size:18px;padding:13px 18px}
+}
+@media(max-height:560px){.snake-speech{max-height:calc(100dvh - 45px);overflow:auto;border-radius:40px;padding:25px 30px;bottom:20px}.snake-speech::before,.snake-speech::after{display:none}}
