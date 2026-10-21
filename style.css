@@ -273,3 +273,35 @@ body{isolation:isolate}.scroll-symbol{z-index:1;width:76px;height:76px;border:0;
 @media(max-width:760px) and (prefers-reduced-motion:no-preference){
  .project-stack>.project-card:nth-of-type(n){position:sticky;top:var(--mobile-stack-top,80px);z-index:var(--mobile-stack-layer,1);margin-bottom:28px;transform:none}
 }
+
+/* A discoverable, keyboard-accessible hello from the portfolio mascot. */
+.snake-invite{display:inline-flex;align-items:center;gap:8px;padding:8px 0;background:none;border:0;color:var(--accent);font:inherit;font-size:13px;text-align:left;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.hero-snake-invite{margin:18px 0 0}.snake-invite:hover{opacity:.8}
+.snake-invite:focus-visible,.snake-speech a:focus-visible,.snake-speech button:focus-visible{outline:2px solid currentColor;outline-offset:5px}
+.site-footer{flex-wrap:wrap}.site-footer>.snake-invite{flex-basis:100%}
+.snake-speech{position:fixed;right:24px;bottom:24px;width:min(350px,calc(100vw - 40px));max-height:calc(100dvh - 120px);overflow:auto;box-sizing:border-box;z-index:60;padding:26px 24px 22px;background:#f6f9e9;color:#142619;border:3px solid #142619;border-radius:22px 22px 4px 22px;box-shadow:6px 6px 0 #a7c77c;isolation:isolate}
+.snake-speech[hidden]{display:none}.snake-shout{display:block;padding-right:25px;font-size:22px;line-height:1.15;font-weight:900;letter-spacing:-.5px}
+.snake-speech p{font-size:16px;line-height:1.55;margin:16px 0}.snake-speech-close{position:absolute;right:9px;top:7px;width:40px;height:40px;border:0;background:none;color:#142619;font-size:28px;cursor:pointer}
+.snake-speech-link{display:inline-block;color:#142619;font-size:14px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+@media(max-width:760px){.snake-speech{right:20px;bottom:20px;padding:22px 20px 18px}.snake-shout{font-size:20px}.hero-snake-invite{font-size:13px}}
+.snake-speech p{color:#243b2b}
+
+/* Hand-drawn margin notes stay in normal flow to avoid overlapping headings. */
+.heading-aside{display:flex;align-items:center;gap:8px;max-width:380px;margin:10px 0 18px;color:var(--accent);font-family:"Comic Sans MS","Chalkboard SE",cursive;font-size:16px;font-style:italic;line-height:1.45}
+.heading-aside svg{flex:0 0 70px;width:70px;height:44px}.heading-aside span{max-width:270px}
+.snake-no-hands{display:inline-block;white-space:nowrap;font-family:"Comic Sans MS","Chalkboard SE",cursive;font-weight:900;font-size:1.12em;color:#142619}
+.snake-no-hands span{display:inline-block;transform:translateY(0);animation:snake-letter-wave 1.3s ease-in-out 3;animation-delay:calc(var(--letter)*-90ms)}
+@keyframes snake-letter-wave{0%,100%{transform:translateY(1px) rotate(-5deg)}50%{transform:translateY(-3px) rotate(5deg)}}
+@media(prefers-reduced-motion:reduce){.snake-no-hands span{animation:none}.snake-no-hands span:nth-child(even){transform:translateY(-2px) rotate(4deg)}}
+@media(max-width:760px){.heading-aside{font-size:14px;margin:8px 0 16px;max-width:100%}.heading-aside svg{flex-basis:48px;width:48px;height:36px}}
+
+/* Rounded speech balloons, with tails pointing toward their speakers. */
+.snake-speech{border-radius:48% 44% 42% 14% / 28% 30% 26% 24%;padding:30px 30px 27px;overflow:visible;box-shadow:4px 5px 0 #a7c77c}
+.snake-speech::after{content:"";position:absolute;right:28px;bottom:-13px;width:24px;height:24px;background:#f6f9e9;border-right:3px solid #142619;border-bottom:3px solid #142619;transform:skewY(25deg);border-radius:0 0 6px 0;z-index:-1}
+.snake-speech-close{right:18px;top:10px}.snake-shout{font-family:"Comic Sans MS","Chalkboard SE",cursive;font-weight:900}
+.about-portrait{position:relative;padding-top:0}
+.about-portrait>.portrait-speech{position:relative;display:block;box-sizing:border-box;margin:0 6px 26px;padding:22px 24px;background:#f6f9e9;color:#142619;border:3px solid #142619;border-radius:48% 44% 40% 36% / 24% 28% 30% 26%;box-shadow:4px 4px 0 var(--accent);text-align:center;transform:none;z-index:2}
+.portrait-speech::after{content:"";position:absolute;left:52%;bottom:-14px;width:23px;height:23px;background:#f6f9e9;border-right:3px solid #142619;border-bottom:3px solid #142619;transform:rotate(35deg) skew(12deg);border-radius:0 0 5px 0}
+.portrait-speech strong{display:block;font-family:"Comic Sans MS","Chalkboard SE",cursive;font-size:21px;line-height:1.25;padding:0 10px}
+.portrait-speech p{color:#243b2b;font-size:14px;line-height:1.5;margin:10px 0 0}.speech-spark{position:absolute;left:12px;top:10px;font-size:22px}
+@media(max-width:760px){.snake-speech{width:min(350px,calc(100vw - 40px));padding:26px 23px 24px;bottom:26px}.snake-speech p{font-size:15px}.snake-shout{font-size:19px}.about-portrait>.portrait-speech{margin:0 4px 26px;padding:21px 18px}.portrait-speech strong{font-size:19px}.portrait-speech p{font-size:13px}.career-column .skill-chips{gap:7px}.career-column .skill-chips li{max-width:100%;white-space:normal;font-size:12px}}

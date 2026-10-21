@@ -163,7 +163,32 @@
     addEventListener('scroll',()=>{extreme=direction===1?Math.max(extreme,scrollY):Math.min(extreme,scrollY);if((direction===1&&scrollY<extreme-18)||(direction===-1&&scrollY>extreme+18)){direction*=-1;extreme=scrollY;}updateTarget();schedule();},{passive:true});
     addEventListener('resize',rebuild);addEventListener('load',rebuild);
     reduced.addEventListener('change',schedule);
-    guide.addEventListener('click',()=>{if(!reduced.matches){coilStart=performance.now();schedule();}});
+    const speech=document.createElement('aside');
+    speech.id='snake-speech';speech.className='snake-speech';speech.hidden=true;
+    speech.setAttribute('aria-label','A message from the portfolio snake');
+    const close=document.createElement('button');close.type='button';close.className='snake-speech-close';close.textContent='×';
+    const shout=document.createElement('strong');shout.className='snake-shout';
+    const message=document.createElement('p');message.setAttribute('role','status');message.setAttribute('aria-live','polite');
+    const link=document.createElement('a');link.className='snake-speech-link';link.href='mailto:nitinsingh.web07@gmail.com?subject=Let%27s%20talk%20about%20a%20role';
+    speech.append(close,shout,message,link);document.body.append(speech);
+    const invites=[guide,...document.querySelectorAll('.snake-invite')];let opener=guide;
+    function dismiss(){speech.hidden=true;invites.forEach(el=>el.setAttribute('aria-expanded','false'));opener.focus({preventScroll:true});}
+    function greet(event){
+      opener=event.currentTarget;
+      const de=document.documentElement.lang==='de';
+      close.setAttribute('aria-label',de?'Nachricht schließen':'Close snake message');
+      shout.textContent=de?'JAA! EIN JOBANGEBOT?!':'YAAAY! A JOB OFFER?!';
+      const punchline=document.createElement('strong');punchline.className='snake-no-hands';
+      const words=de?'KEINE HÄNDE':'NO HANDS';punchline.setAttribute('aria-label',words);
+      [...words].forEach((letter,i)=>{const glyph=document.createElement('span');glyph.textContent=letter===' '?'\u00a0':letter;glyph.style.setProperty('--letter',i);glyph.setAttribute('aria-hidden','true');punchline.append(glyph);});
+      message.replaceChildren(document.createTextNode(de?'Ich habe den Handschlag schon geübt. Ein kleines Problem allerdings: ':'I already practised my handshake. Tiny Problem Though: '),punchline,document.createTextNode(de?'. Nitin übernimmt das Gespräch.':'. Nitin can take the interview.'));
+      link.textContent=de?'Mit meinem Menschen sprechen ↗':'Talk to My Human ↗';
+      speech.hidden=false;invites.forEach(el=>el.setAttribute('aria-expanded','true'));
+      if(!reduced.matches){coilStart=performance.now();schedule();}
+    }
+    invites.forEach(el=>el.addEventListener('click',greet));
+    close.addEventListener('click',dismiss);
+    document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!speech.hidden)dismiss();});
     rebuild();position=target;
     document.fonts.ready.then(rebuild);
   }
