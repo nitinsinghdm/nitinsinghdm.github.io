@@ -182,7 +182,7 @@
       const words=de?'KEINE HÄNDE':'NO HANDS';punchline.setAttribute('aria-label',words);
       [...words].forEach((letter,i)=>{const glyph=document.createElement('span');glyph.textContent=letter===' '?'\u00a0':letter;glyph.style.setProperty('--letter',i);glyph.setAttribute('aria-hidden','true');punchline.append(glyph);});
       message.replaceChildren(document.createTextNode(de?'Ich habe den Handschlag schon geübt. Ein kleines Problem allerdings: ':'I already practised my handshake. Tiny Problem Though: '),punchline,document.createTextNode(de?'. Nitin übernimmt das Gespräch.':'. Nitin can take the interview.'));
-      link.textContent=de?'Mit meinem Menschen sprechen ↗︎':'Talk to My Human ↗︎';
+      link.textContent=de?'Mit meinem Menschen sprechen ↗':'Talk to My Human ↗';
       speech.hidden=false;invites.forEach(el=>el.setAttribute('aria-expanded','true'));
       if(!reduced.matches){coilStart=performance.now();schedule();}
     }
