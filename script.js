@@ -14,7 +14,7 @@
     themeButton.innerHTML = light
       ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.5 13.1A8.5 8.5 0 0 1 10.9 3.5 8.5 8.5 0 1 0 20.5 13.1Z"/></svg>'
       : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1 1m12 12 1 1M5 19l1-1M18 6l1-1"/></svg>';
-    document.querySelector('meta[name="theme-color"]').content = light ? '#f5f5ee' : '#101411';
+    document.querySelector('meta[name="theme-color"]').content = light ? '#f4f4f4' : '#131313';
   }
   function setLanguage(lang) {
     if (!['en', 'de'].includes(lang)) return;
@@ -91,7 +91,7 @@
     const svg=guide.querySelector('svg'),body=guide.querySelector('.snake-body'),pattern=guide.querySelector('.snake-pattern'),head=guide.querySelector('.snake-head');
     const route=document.createElementNS('http://www.w3.org/2000/svg','path');
     const tail=document.createElementNS('http://www.w3.org/2000/svg','path');
-    tail.setAttribute('fill','#b9df72');tail.setAttribute('pointer-events','none');svg.insertBefore(tail,head);
+    tail.setAttribute('fill','#cfcfcf');tail.setAttribute('pointer-events','none');svg.insertBefore(tail,head);
     let legs=[],total=0,frame=0,last=0,position=0,target=0,direction=1,extreme=scrollY,angle=0,coilStart=0;
     const clamp=(x,a,b)=>Math.max(a,Math.min(b,x));
     function rebuild(){
