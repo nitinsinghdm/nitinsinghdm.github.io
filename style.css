@@ -388,9 +388,3 @@ body{isolation:isolate}.scroll-symbol{z-index:1;width:76px;height:76px;border:0;
 .case-comic-note svg{position:absolute;width:75px;height:75px;top:12px;left:-65px;pointer-events:none}
 @media(max-width:1000px){.case-heading-comic{gap:32px;grid-template-columns:minmax(0,1fr) 220px}.case-comic-bubble{font-size:26px;padding:28px 22px}.case-comic-note{font-size:21px;margin-left:30px}}
 @media(max-width:760px){.case-heading-comic{grid-template-columns:1fr;gap:18px;padding-right:0}.case-heading-comic h1{font-size:36px;padding-right:0}.case-comic{justify-self:end;width:235px;max-width:calc(100% - 16px);margin:10px 0 0;padding:0 8px}.case-comic-bubble{font-size:25px;padding:27px 23px 30px;transform:rotate(2deg)}.case-comic-note{font-size:21px;margin:35px 0 30px 30px}.case-comic-note svg{width:65px;height:65px;left:-55px;top:8px}}
-
-/* Vector arrows remain consistent on mobile and desktop. */
-.link-arrow{display:inline-block;width:1em;height:1em;flex-shrink:0;vertical-align:-.1em}
-
-/* Solid original surfaces; no glass blur or transparency. */
-.site-header{background:var(--bg);-webkit-backdrop-filter:none;backdrop-filter:none}
