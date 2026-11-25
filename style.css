@@ -388,3 +388,13 @@ body{isolation:isolate}.scroll-symbol{z-index:1;width:76px;height:76px;border:0;
 .case-comic-note svg{position:absolute;width:75px;height:75px;top:12px;left:-65px;pointer-events:none}
 @media(max-width:1000px){.case-heading-comic{gap:32px;grid-template-columns:minmax(0,1fr) 220px}.case-comic-bubble{font-size:26px;padding:28px 22px}.case-comic-note{font-size:21px;margin-left:30px}}
 @media(max-width:760px){.case-heading-comic{grid-template-columns:1fr;gap:18px;padding-right:0}.case-heading-comic h1{font-size:36px;padding-right:0}.case-comic{justify-self:end;width:235px;max-width:calc(100% - 16px);margin:10px 0 0;padding:0 8px}.case-comic-bubble{font-size:25px;padding:27px 23px 30px;transform:rotate(2deg)}.case-comic-note{font-size:21px;margin:35px 0 30px 30px}.case-comic-note svg{width:65px;height:65px;left:-55px;top:8px}}
+
+/* Four readable skill groups, using the existing palette and typography. */
+.skills-block.skills-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; border:0; margin-top:32px; }
+.skills-block.skills-grid > .skills-category { min-width:0; padding:20px; border:1px solid var(--line); border-radius:14px; background:var(--surface); }
+.skills-number { display:block; color:var(--accent); font-size:10px; letter-spacing:.12em; margin-bottom:12px; }
+.skills-block.skills-grid strong { display:block; font-size:15px; line-height:1.4; }
+.skills-block.skills-grid .skills-description { font-size:12px; line-height:1.7; color:var(--muted); margin:8px 0 16px; }
+.skills-tags { list-style:none; display:flex; flex-wrap:wrap; gap:7px; padding:0; margin:0; }
+.skills-tags li { font-size:11px; line-height:1.5; padding:5px 8px; border:1px solid var(--line); border-radius:6px; color:var(--text); overflow-wrap:anywhere; }
+@media(min-width:761px) and (max-width:1150px), (max-width:480px) { .skills-block.skills-grid { grid-template-columns:minmax(0,1fr); } }
